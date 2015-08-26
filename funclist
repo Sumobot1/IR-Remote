@@ -1,0 +1,10 @@
+_panasonic: CODE, 431 0 451
+_pingSony: CODE, 252 0 29
+_main: CODE, 1372 0 670
+_pingNEC: CODE, 281 0 31
+_initPorts: CODE, 240 0 12
+__initialization: CODE, 2042 0 4
+_pingRC5: CODE, 312 0 34
+_send: CODE, 882 0 490
+_derp: CODE, 346 0 85
+Total: 1806

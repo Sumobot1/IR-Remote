@@ -1,0 +1,3733 @@
+
+
+Microchip Technology PIC LITE Macro Assembler V1.33 build 59893 
+                                                                                               Fri May 08 15:17:09 2015
+
+Microchip Technology Omniscient Code Generator (Lite mode) build 59893
+     1                           	processor	12F683
+     2                           	opt	pw 120
+     3                           	opt	lm
+     4                           	psect	text0,local,class=CODE,merge=1,delta=2
+     5                           	psect	cinit,global,class=CODE,merge=1,delta=2
+     6                           	psect	bssCOMMON,global,class=COMMON,space=1,delta=1
+     7                           	psect	bssBANK0,global,class=BANK0,space=1,delta=1
+     8                           	psect	cstackCOMMON,global,class=COMMON,space=1,delta=1
+     9                           	psect	cstackBANK0,global,class=BANK0,space=1,delta=1
+    10                           	psect	maintext,global,class=CODE,split=1,delta=2
+    11                           	psect	text1,local,class=CODE,merge=1,delta=2
+    12                           	psect	text2,local,class=CODE,merge=1,delta=2
+    13                           	psect	text3,local,class=CODE,merge=1,delta=2
+    14                           	psect	text4,local,class=CODE,merge=1,delta=2
+    15                           	psect	text5,local,class=CODE,merge=1,delta=2
+    16                           	psect	text6,local,class=CODE,merge=1,delta=2
+    17                           	psect	text7,local,class=CODE,merge=1,delta=2
+    18                           	dabs	1,0x7E,2
+    19  0000                     	;# 
+    20  0001                     	;# 
+    21  0002                     	;# 
+    22  0003                     	;# 
+    23  0004                     	;# 
+    24  0005                     	;# 
+    25  000A                     	;# 
+    26  000B                     	;# 
+    27  000C                     	;# 
+    28  000E                     	;# 
+    29  000E                     	;# 
+    30  000F                     	;# 
+    31  0010                     	;# 
+    32  0011                     	;# 
+    33  0012                     	;# 
+    34  0013                     	;# 
+    35  0013                     	;# 
+    36  0014                     	;# 
+    37  0015                     	;# 
+    38  0018                     	;# 
+    39  0019                     	;# 
+    40  001A                     	;# 
+    41  001E                     	;# 
+    42  001F                     	;# 
+    43  0081                     	;# 
+    44  0085                     	;# 
+    45  008C                     	;# 
+    46  008E                     	;# 
+    47  008F                     	;# 
+    48  0090                     	;# 
+    49  0092                     	;# 
+    50  0095                     	;# 
+    51  0095                     	;# 
+    52  0096                     	;# 
+    53  0096                     	;# 
+    54  0099                     	;# 
+    55  009A                     	;# 
+    56  009A                     	;# 
+    57  009B                     	;# 
+    58  009C                     	;# 
+    59  009D                     	;# 
+    60  009E                     	;# 
+    61  009F                     	;# 
+    62  0000                     	;# 
+    63  0001                     	;# 
+    64  0002                     	;# 
+    65  0003                     	;# 
+    66  0004                     	;# 
+    67  0005                     	;# 
+    68  000A                     	;# 
+    69  000B                     	;# 
+    70  000C                     	;# 
+    71  000E                     	;# 
+    72  000E                     	;# 
+    73  000F                     	;# 
+    74  0010                     	;# 
+    75  0011                     	;# 
+    76  0012                     	;# 
+    77  0013                     	;# 
+    78  0013                     	;# 
+    79  0014                     	;# 
+    80  0015                     	;# 
+    81  0018                     	;# 
+    82  0019                     	;# 
+    83  001A                     	;# 
+    84  001E                     	;# 
+    85  001F                     	;# 
+    86  0081                     	;# 
+    87  0085                     	;# 
+    88  008C                     	;# 
+    89  008E                     	;# 
+    90  008F                     	;# 
+    91  0090                     	;# 
+    92  0092                     	;# 
+    93  0095                     	;# 
+    94  0095                     	;# 
+    95  0096                     	;# 
+    96  0096                     	;# 
+    97  0099                     	;# 
+    98  009A                     	;# 
+    99  009A                     	;# 
+   100  009B                     	;# 
+   101  009C                     	;# 
+   102  009D                     	;# 
+   103  009E                     	;# 
+   104  009F                     	;# 
+   105  0000                     	;# 
+   106  0001                     	;# 
+   107  0002                     	;# 
+   108  0003                     	;# 
+   109  0004                     	;# 
+   110  0005                     	;# 
+   111  000A                     	;# 
+   112  000B                     	;# 
+   113  000C                     	;# 
+   114  000E                     	;# 
+   115  000E                     	;# 
+   116  000F                     	;# 
+   117  0010                     	;# 
+   118  0011                     	;# 
+   119  0012                     	;# 
+   120  0013                     	;# 
+   121  0013                     	;# 
+   122  0014                     	;# 
+   123  0015                     	;# 
+   124  0018                     	;# 
+   125  0019                     	;# 
+   126  001A                     	;# 
+   127  001E                     	;# 
+   128  001F                     	;# 
+   129  0081                     	;# 
+   130  0085                     	;# 
+   131  008C                     	;# 
+   132  008E                     	;# 
+   133  008F                     	;# 
+   134  0090                     	;# 
+   135  0092                     	;# 
+   136  0095                     	;# 
+   137  0095                     	;# 
+   138  0096                     	;# 
+   139  0096                     	;# 
+   140  0099                     	;# 
+   141  009A                     	;# 
+   142  009A                     	;# 
+   143  009B                     	;# 
+   144  009C                     	;# 
+   145  009D                     	;# 
+   146  009E                     	;# 
+   147  009F                     	;# 
+   148  0000                     	;# 
+   149  0001                     	;# 
+   150  0002                     	;# 
+   151  0003                     	;# 
+   152  0004                     	;# 
+   153  0005                     	;# 
+   154  000A                     	;# 
+   155  000B                     	;# 
+   156  000C                     	;# 
+   157  000E                     	;# 
+   158  000E                     	;# 
+   159  000F                     	;# 
+   160  0010                     	;# 
+   161  0011                     	;# 
+   162  0012                     	;# 
+   163  0013                     	;# 
+   164  0013                     	;# 
+   165  0014                     	;# 
+   166  0015                     	;# 
+   167  0018                     	;# 
+   168  0019                     	;# 
+   169  001A                     	;# 
+   170  001E                     	;# 
+   171  001F                     	;# 
+   172  0081                     	;# 
+   173  0085                     	;# 
+   174  008C                     	;# 
+   175  008E                     	;# 
+   176  008F                     	;# 
+   177  0090                     	;# 
+   178  0092                     	;# 
+   179  0095                     	;# 
+   180  0095                     	;# 
+   181  0096                     	;# 
+   182  0096                     	;# 
+   183  0099                     	;# 
+   184  009A                     	;# 
+   185  009A                     	;# 
+   186  009B                     	;# 
+   187  009C                     	;# 
+   188  009D                     	;# 
+   189  009E                     	;# 
+   190  009F                     	;# 
+   191  0019                     _CMCON0	set	25
+   192  0005                     _GPIO	set	5
+   193  0028                     _GP0	set	40
+   194  0029                     _GP1	set	41
+   195  002A                     _GP2	set	42
+   196  002B                     _GP3	set	43
+   197  002C                     _GP4	set	44
+   198  002D                     _GP5	set	45
+   199  009F                     _ANSEL	set	159
+   200  0081                     _OPTION_REG	set	129
+   201  0085                     _TRISIO	set	133
+   202                           
+   203                           	psect	text0
+   204  0000                     __ptext0:	
+   205                           ; #config settings
+   206                           
+   207                           
+   208                           ;psect for function _pingNEC
+   209  0000                     
+   210                           	psect	cinit
+   211  07FA                     start_initialization:	
+   212  07FA                     __initialization:	
+   213                           
+   214                           ; Clear objects allocated to COMMON
+   215  07FA  01FC               	clrf	__pbssCOMMON& (0+127)
+   216  07FB  01FD               	clrf	(__pbssCOMMON+1)& (0+127)
+   217                           
+   218                           ; Clear objects allocated to BANK0
+   219  07FC  01D7               	clrf	__pbssBANK0& (0+127)
+   220  07FD  01D8               	clrf	(__pbssBANK0+1)& (0+127)
+   221  07FE                     end_of_initialization:	
+   222                           ;End of C runtime variable initialization code
+   223                           
+   224  07FE                     __end_of__initialization:	
+   225  07FE  0183               	clrf	3
+   226  07FF  2D5C               	ljmp	_main	;jump to C main() function
+   227                           
+   228                           	psect	bssCOMMON
+   229  007C                     __pbssCOMMON:	
+   230  007C                     _cTemp:	
+   231  007C                     	ds	1
+   232  007D                     _counter:	
+   233  007D                     	ds	1
+   234                           
+   235                           	psect	bssBANK0
+   236  0057                     __pbssBANK0:	
+   237  0057                     _i:	
+   238  0057                     	ds	1
+   239  0058                     _j:	
+   240  0058                     	ds	1
+   241                           
+   242                           	psect	cstackCOMMON
+   243  0070                     __pcstackCOMMON:	
+   244  0070                     ?_initPorts:	
+   245  0070                     ??_initPorts:	
+   246                           ; 0 bytes @ 0x0
+   247                           
+   248  0070                     ?_pingSony:	
+   249                           ; 0 bytes @ 0x0
+   250                           
+   251  0070                     ??_pingSony:	
+   252                           ; 0 bytes @ 0x0
+   253                           
+   254  0070                     ?_pingNEC:	
+   255                           ; 0 bytes @ 0x0
+   256                           
+   257  0070                     ??_pingNEC:	
+   258                           ; 0 bytes @ 0x0
+   259                           
+   260  0070                     ?_pingRC5:	
+   261                           ; 0 bytes @ 0x0
+   262                           
+   263  0070                     ??_pingRC5:	
+   264                           ; 0 bytes @ 0x0
+   265                           
+   266  0070                     ?_main:	
+   267                           ; 0 bytes @ 0x0
+   268                           
+   269                           
+   270                           ; 2 bytes @ 0x0
+   271  0070                     	ds	1
+   272  0071                     pingSony@cPulses:	
+   273  0071                     pingNEC@cPulses:	
+   274                           ; 1 bytes @ 0x1
+   275                           
+   276  0071                     pingRC5@cPulses:	
+   277                           ; 1 bytes @ 0x1
+   278                           
+   279                           
+   280                           ; 1 bytes @ 0x1
+   281  0071                     	ds	1
+   282  0072                     ?_send:	
+   283  0072                     ?_panasonic:	
+   284                           ; 0 bytes @ 0x2
+   285                           
+   286  0072                     send@cCommand:	
+   287                           ; 0 bytes @ 0x2
+   288                           
+   289  0072                     panasonic@PanasonicTV2:	
+   290                           ; 1 bytes @ 0x2
+   291                           
+   292                           
+   293                           ; 1 bytes @ 0x2
+   294  0072                     	ds	1
+   295  0073                     send@c:	
+   296  0073                     panasonic@PanasonicTV3:	
+   297                           ; 1 bytes @ 0x3
+   298                           
+   299                           
+   300                           ; 1 bytes @ 0x3
+   301  0073                     	ds	1
+   302  0074                     send@flip:	
+   303  0074                     panasonic@PanasonicTV4:	
+   304                           ; 1 bytes @ 0x4
+   305                           
+   306                           
+   307                           ; 1 bytes @ 0x4
+   308  0074                     	ds	1
+   309  0075                     ??_send:	
+   310  0075                     panasonic@PanasonicCommand:	
+   311                           ; 0 bytes @ 0x5
+   312                           
+   313                           
+   314                           ; 1 bytes @ 0x5
+   315  0075                     	ds	1
+   316  0076                     panasonic@PanasonicCommand2:	
+   317                           
+   318                           ; 1 bytes @ 0x6
+   319  0076                     	ds	1
+   320  0077                     ?_derp:	
+   321  0077                     derp@cCommand:	
+   322                           ; 0 bytes @ 0x7
+   323                           
+   324  0077                     panasonic@PanasonicFinal:	
+   325                           ; 1 bytes @ 0x7
+   326                           
+   327                           
+   328                           ; 1 bytes @ 0x7
+   329  0077                     	ds	1
+   330  0078                     ??_panasonic:	
+   331  0078                     derp@c:	
+   332                           ; 0 bytes @ 0x8
+   333                           
+   334                           
+   335                           ; 1 bytes @ 0x8
+   336  0078                     	ds	1
+   337  0079                     derp@flip:	
+   338                           
+   339                           ; 1 bytes @ 0x9
+   340  0079                     	ds	1
+   341  007A                     derp@nDelay:	
+   342                           
+   343                           ; 2 bytes @ 0xA
+   344  007A                     	ds	2
+   345                           
+   346                           	psect	cstackBANK0
+   347  0020                     __pcstackBANK0:	
+   348  0020                     send@i:	
+   349  0020                     panasonic@i:	
+   350                           ; 2 bytes @ 0x0
+   351                           
+   352                           
+   353                           ; 2 bytes @ 0x0
+   354  0020                     	ds	2
+   355  0022                     send@i_57:	
+   356  0022                     panasonic@i_80:	
+   357                           ; 2 bytes @ 0x2
+   358                           
+   359                           
+   360                           ; 2 bytes @ 0x2
+   361  0022                     	ds	2
+   362  0024                     send@i_58:	
+   363  0024                     panasonic@i_81:	
+   364                           ; 2 bytes @ 0x4
+   365                           
+   366                           
+   367                           ; 2 bytes @ 0x4
+   368  0024                     	ds	2
+   369  0026                     send@i_59:	
+   370  0026                     panasonic@i_82:	
+   371                           ; 2 bytes @ 0x6
+   372                           
+   373                           
+   374                           ; 2 bytes @ 0x6
+   375  0026                     	ds	2
+   376  0028                     send@i_61:	
+   377  0028                     panasonic@i_83:	
+   378                           ; 1 bytes @ 0x8
+   379                           
+   380                           
+   381                           ; 2 bytes @ 0x8
+   382  0028                     	ds	1
+   383  0029                     send@i_62:	
+   384                           
+   385                           ; 1 bytes @ 0x9
+   386  0029                     	ds	1
+   387  002A                     send@cAddress:	
+   388  002A                     panasonic@i_84:	
+   389                           ; 1 bytes @ 0xA
+   390                           
+   391                           
+   392                           ; 2 bytes @ 0xA
+   393  002A                     	ds	1
+   394  002B                     ??_derp:	
+   395                           
+   396                           ; 0 bytes @ 0xB
+   397  002B                     	ds	1
+   398  002C                     panasonic@i_85:	
+   399                           
+   400                           ; 2 bytes @ 0xC
+   401  002C                     	ds	2
+   402  002E                     derp@cAddress:	
+   403  002E                     panasonic@PanasonicTV:	
+   404                           ; 1 bytes @ 0xE
+   405                           
+   406                           
+   407                           ; 1 bytes @ 0xE
+   408  002E                     	ds	1
+   409  002F                     derp@i:	
+   410                           
+   411                           ; 2 bytes @ 0xF
+   412  002F                     	ds	2
+   413  0031                     ??_main:	
+   414                           
+   415                           ; 0 bytes @ 0x11
+   416  0031                     	ds	6
+   417  0037                     main@PanasonicUp:	
+   418                           
+   419                           ; 1 bytes @ 0x17
+   420  0037                     	ds	1
+   421  0038                     main@PanasonicUp2:	
+   422                           
+   423                           ; 1 bytes @ 0x18
+   424  0038                     	ds	1
+   425  0039                     main@SonyDown:	
+   426                           
+   427                           ; 1 bytes @ 0x19
+   428  0039                     	ds	1
+   429  003A                     main@SonyPower:	
+   430                           
+   431                           ; 1 bytes @ 0x1A
+   432  003A                     	ds	1
+   433  003B                     main@SonyUp:	
+   434                           
+   435                           ; 1 bytes @ 0x1B
+   436  003B                     	ds	1
+   437  003C                     main@RelisysUp:	
+   438                           
+   439                           ; 1 bytes @ 0x1C
+   440  003C                     	ds	1
+   441  003D                     main@RelisysDown:	
+   442                           
+   443                           ; 1 bytes @ 0x1D
+   444  003D                     	ds	1
+   445  003E                     main@RelisysPower:	
+   446                           
+   447                           ; 1 bytes @ 0x1E
+   448  003E                     	ds	1
+   449  003F                     main@PanasonicPower:	
+   450                           
+   451                           ; 1 bytes @ 0x1F
+   452  003F                     	ds	1
+   453  0040                     main@PanasonicPower2:	
+   454                           
+   455                           ; 1 bytes @ 0x20
+   456  0040                     	ds	1
+   457  0041                     main@SharpUp:	
+   458                           
+   459                           ; 1 bytes @ 0x21
+   460  0041                     	ds	1
+   461  0042                     main@SharpDown:	
+   462                           
+   463                           ; 1 bytes @ 0x22
+   464  0042                     	ds	1
+   465  0043                     main@SharpPower:	
+   466                           
+   467                           ; 1 bytes @ 0x23
+   468  0043                     	ds	1
+   469  0044                     main@ToshibaPower:	
+   470                           
+   471                           ; 1 bytes @ 0x24
+   472  0044                     	ds	1
+   473  0045                     main@ToshibaUp:	
+   474                           
+   475                           ; 1 bytes @ 0x25
+   476  0045                     	ds	1
+   477  0046                     main@ToshibaDown:	
+   478                           
+   479                           ; 1 bytes @ 0x26
+   480  0046                     	ds	1
+   481  0047                     main@RC5Down:	
+   482                           
+   483                           ; 1 bytes @ 0x27
+   484  0047                     	ds	1
+   485  0048                     main@RC5Power:	
+   486                           
+   487                           ; 1 bytes @ 0x28
+   488  0048                     	ds	1
+   489  0049                     main@RC5Up:	
+   490                           
+   491                           ; 1 bytes @ 0x29
+   492  0049                     	ds	1
+   493  004A                     main@PanasonicDown:	
+   494                           
+   495                           ; 1 bytes @ 0x2A
+   496  004A                     	ds	1
+   497  004B                     main@PanasonicDown2:	
+   498                           
+   499                           ; 1 bytes @ 0x2B
+   500  004B                     	ds	1
+   501  004C                     main@SonyTV:	
+   502                           
+   503                           ; 1 bytes @ 0x2C
+   504  004C                     	ds	1
+   505  004D                     main@RelisysTV:	
+   506                           
+   507                           ; 1 bytes @ 0x2D
+   508  004D                     	ds	1
+   509  004E                     main@PanasonicTV:	
+   510                           
+   511                           ; 1 bytes @ 0x2E
+   512  004E                     	ds	1
+   513  004F                     main@PanasonicTV2:	
+   514                           
+   515                           ; 1 bytes @ 0x2F
+   516  004F                     	ds	1
+   517  0050                     main@PanasonicTV3:	
+   518                           
+   519                           ; 1 bytes @ 0x30
+   520  0050                     	ds	1
+   521  0051                     main@PanasonicTV4:	
+   522                           
+   523                           ; 1 bytes @ 0x31
+   524  0051                     	ds	1
+   525  0052                     main@PanasonicFinal:	
+   526                           
+   527                           ; 1 bytes @ 0x32
+   528  0052                     	ds	1
+   529  0053                     main@SharpTV:	
+   530                           
+   531                           ; 1 bytes @ 0x33
+   532  0053                     	ds	1
+   533  0054                     main@ToshibaTV:	
+   534                           
+   535                           ; 1 bytes @ 0x34
+   536  0054                     	ds	1
+   537  0055                     main@RC5TV:	
+   538                           
+   539                           ; 1 bytes @ 0x35
+   540  0055                     	ds	1
+   541  0056                     main@cflip:	
+   542                           
+   543                           ; 1 bytes @ 0x36
+   544  0056                     	ds	1
+   545                           
+   546                           	psect	maintext
+   547  055C                     __pmaintext:	
+   548 ;;
+   549 ;;Main: autosize = 0, tempsize = 6, incstack = 0, save=0
+   550 ;;
+   551 ;; *************** function _main *****************
+   552 ;; Defined at:
+   553 ;;		line 314 in file "main.c"
+   554 ;; Parameters:    Size  Location     Type
+   555 ;;		None
+   556 ;; Auto vars:     Size  Location     Type
+   557 ;;  cflip           1   54[BANK0 ] unsigned char 
+   558 ;;  RC5TV           1   53[BANK0 ] unsigned char 
+   559 ;;  ToshibaTV       1   52[BANK0 ] unsigned char 
+   560 ;;  SharpTV         1   51[BANK0 ] unsigned char 
+   561 ;;  PanasonicFin    1   50[BANK0 ] unsigned char 
+   562 ;;  PanasonicTV4    1   49[BANK0 ] unsigned char 
+   563 ;;  PanasonicTV3    1   48[BANK0 ] unsigned char 
+   564 ;;  PanasonicTV2    1   47[BANK0 ] unsigned char 
+   565 ;;  PanasonicTV     1   46[BANK0 ] unsigned char 
+   566 ;;  RelisysTV       1   45[BANK0 ] unsigned char 
+   567 ;;  SonyTV          1   44[BANK0 ] unsigned char 
+   568 ;;  PanasonicDow    1   43[BANK0 ] unsigned char 
+   569 ;;  PanasonicDow    1   42[BANK0 ] unsigned char 
+   570 ;;  RC5Up           1   41[BANK0 ] unsigned char 
+   571 ;;  RC5Power        1   40[BANK0 ] unsigned char 
+   572 ;;  RC5Down         1   39[BANK0 ] unsigned char 
+   573 ;;  ToshibaDown     1   38[BANK0 ] unsigned char 
+   574 ;;  ToshibaUp       1   37[BANK0 ] unsigned char 
+   575 ;;  ToshibaPower    1   36[BANK0 ] unsigned char 
+   576 ;;  SharpPower      1   35[BANK0 ] unsigned char 
+   577 ;;  SharpDown       1   34[BANK0 ] unsigned char 
+   578 ;;  SharpUp         1   33[BANK0 ] unsigned char 
+   579 ;;  PanasonicPow    1   32[BANK0 ] unsigned char 
+   580 ;;  PanasonicPow    1   31[BANK0 ] unsigned char 
+   581 ;;  RelisysPower    1   30[BANK0 ] unsigned char 
+   582 ;;  RelisysDown     1   29[BANK0 ] unsigned char 
+   583 ;;  RelisysUp       1   28[BANK0 ] unsigned char 
+   584 ;;  SonyUp          1   27[BANK0 ] unsigned char 
+   585 ;;  SonyPower       1   26[BANK0 ] unsigned char 
+   586 ;;  SonyDown        1   25[BANK0 ] unsigned char 
+   587 ;;  PanasonicUp2    1   24[BANK0 ] unsigned char 
+   588 ;;  PanasonicUp     1   23[BANK0 ] unsigned char 
+   589 ;; Return value:  Size  Location     Type
+   590 ;;                  2  144[COMMON] int 
+   591 ;; Registers used:
+   592 ;;		wreg, status,2, status,0, btemp+1, pclath, cstack
+   593 ;; Tracked objects:
+   594 ;;		On entry : 17F/0
+   595 ;;		On exit  : 0/0
+   596 ;;		Unchanged: 0/0
+   597 ;; Data sizes:     COMMON   BANK0   BANK1
+   598 ;;      Params:         0       0       0
+   599 ;;      Locals:         0      32       0
+   600 ;;      Temps:          0       6       0
+   601 ;;      Totals:         0      38       0
+   602 ;;Total ram usage:       38 bytes
+   603 ;; Hardware stack levels required when called:    3
+   604 ;; This function calls:
+   605 ;;		_derp
+   606 ;;		_initPorts
+   607 ;;		_panasonic
+   608 ;; This function is called by:
+   609 ;;		Startup code after reset
+   610 ;; This function uses a non-reentrant model
+   611 ;;
+   612                           
+   613                           
+   614                           ;psect for function _main
+   615  055C                     _main:	
+   616                           
+   617                           ;main.c: 317: initPorts();
+   618                           
+   619                           ;incstack = 0
+   620                           ; Regs used in _main: [wreg+status,2+status,0+btemp+1+pclath+cstack]
+   621  055C  20F0               	fcall	_initPorts
+   622                           
+   623                           ;main.c: 319: unsigned char SonyDown = 0b00010011;
+   624  055D  3013               	movlw	19
+   625  055E  1283               	bcf	3,5	;RP0=0, select bank0
+   626  055F  00B1               	movwf	??_main
+   627  0560  0831               	movf	??_main,w
+   628  0561  00B9               	movwf	main@SonyDown
+   629                           
+   630                           ;main.c: 320: unsigned char SonyTV = 0b00000001;
+   631  0562  01CC               	clrf	main@SonyTV
+   632  0563  0ACC               	incf	main@SonyTV,f
+   633                           
+   634                           ;main.c: 321: unsigned char SonyPower = 0b00010101;
+   635  0564  3015               	movlw	21
+   636  0565  00B1               	movwf	??_main
+   637  0566  0831               	movf	??_main,w
+   638  0567  00BA               	movwf	main@SonyPower
+   639                           
+   640                           ;main.c: 322: unsigned char SonyUp = 0b00010010;
+   641  0568  3012               	movlw	18
+   642  0569  00B1               	movwf	??_main
+   643  056A  0831               	movf	??_main,w
+   644  056B  00BB               	movwf	main@SonyUp
+   645                           
+   646                           ;main.c: 324: unsigned char RelisysTV = 0b11101101;
+   647  056C  30ED               	movlw	237
+   648  056D  00B1               	movwf	??_main
+   649  056E  0831               	movf	??_main,w
+   650  056F  00CD               	movwf	main@RelisysTV
+   651                           
+   652                           ;main.c: 325: unsigned char RelisysUp = 0b00011010;
+   653  0570  301A               	movlw	26
+   654  0571  00B1               	movwf	??_main
+   655  0572  0831               	movf	??_main,w
+   656  0573  00BC               	movwf	main@RelisysUp
+   657                           
+   658                           ;main.c: 326: unsigned char RelisysDown = 0b00011110;
+   659  0574  301E               	movlw	30
+   660  0575  00B1               	movwf	??_main
+   661  0576  0831               	movf	??_main,w
+   662  0577  00BD               	movwf	main@RelisysDown
+   663                           
+   664                           ;main.c: 327: unsigned char RelisysPower = 0b00001011;
+   665  0578  300B               	movlw	11
+   666  0579  00B1               	movwf	??_main
+   667  057A  0831               	movf	??_main,w
+   668  057B  00BE               	movwf	main@RelisysPower
+   669                           
+   670                           ;main.c: 329: unsigned char PanasonicTV = 0b00000010;
+   671  057C  3002               	movlw	2
+   672  057D  00B1               	movwf	??_main
+   673  057E  0831               	movf	??_main,w
+   674  057F  00CE               	movwf	main@PanasonicTV
+   675                           
+   676                           ;main.c: 330: unsigned char PanasonicTV2 = 0b00100000;
+   677  0580  3020               	movlw	32
+   678  0581  00B1               	movwf	??_main
+   679  0582  0831               	movf	??_main,w
+   680  0583  00CF               	movwf	main@PanasonicTV2
+   681                           
+   682                           ;main.c: 331: unsigned char PanasonicTV3 = 0b10000000;
+   683  0584  3080               	movlw	128
+   684  0585  00B1               	movwf	??_main
+   685  0586  0831               	movf	??_main,w
+   686  0587  00D0               	movwf	main@PanasonicTV3
+   687                           
+   688                           ;main.c: 332: unsigned char PanasonicTV4 = 0b00000000;
+   689  0588  01D1               	clrf	main@PanasonicTV4
+   690                           
+   691                           ;main.c: 333: unsigned char PanasonicUp = 0b00100000;
+   692  0589  3020               	movlw	32
+   693  058A  00B1               	movwf	??_main
+   694  058B  0831               	movf	??_main,w
+   695  058C  00B7               	movwf	main@PanasonicUp
+   696                           
+   697                           ;main.c: 334: unsigned char PanasonicUp2 = 0b10100000;
+   698  058D  30A0               	movlw	160
+   699  058E  00B1               	movwf	??_main
+   700  058F  0831               	movf	??_main,w
+   701  0590  00B8               	movwf	main@PanasonicUp2
+   702                           
+   703                           ;main.c: 335: unsigned char PanasonicDown = 0b00100001;
+   704  0591  3021               	movlw	33
+   705  0592  00B1               	movwf	??_main
+   706  0593  0831               	movf	??_main,w
+   707  0594  00CA               	movwf	main@PanasonicDown
+   708                           
+   709                           ;main.c: 336: unsigned char PanasonicDown2 = 0b10100001;
+   710  0595  30A1               	movlw	161
+   711  0596  00B1               	movwf	??_main
+   712  0597  0831               	movf	??_main,w
+   713  0598  00CB               	movwf	main@PanasonicDown2
+   714                           
+   715                           ;main.c: 337: unsigned char PanasonicPower = 0b00111101;
+   716  0599  303D               	movlw	61
+   717  059A  00B1               	movwf	??_main
+   718  059B  0831               	movf	??_main,w
+   719  059C  00BF               	movwf	main@PanasonicPower
+   720                           
+   721                           ;main.c: 338: unsigned char PanasonicPower2 = 0b10111101;
+   722  059D  30BD               	movlw	189
+   723  059E  00B1               	movwf	??_main
+   724  059F  0831               	movf	??_main,w
+   725  05A0  00C0               	movwf	main@PanasonicPower2
+   726                           
+   727                           ;main.c: 339: unsigned char PanasonicFinal = 0b00000000;
+   728  05A1  01D2               	clrf	main@PanasonicFinal
+   729                           
+   730                           ;main.c: 341: unsigned char SharpTV = 0b00000001;
+   731  05A2  01D3               	clrf	main@SharpTV
+   732  05A3  0AD3               	incf	main@SharpTV,f
+   733                           
+   734                           ;main.c: 342: unsigned char SharpUp = 0b00010100;
+   735  05A4  3014               	movlw	20
+   736  05A5  00B1               	movwf	??_main
+   737  05A6  0831               	movf	??_main,w
+   738  05A7  00C1               	movwf	main@SharpUp
+   739                           
+   740                           ;main.c: 343: unsigned char SharpDown = 0b00010110;
+   741  05A8  3016               	movlw	22
+   742  05A9  00B1               	movwf	??_main
+   743  05AA  0831               	movf	??_main,w
+   744  05AB  00C2               	movwf	main@SharpDown
+   745                           
+   746                           ;main.c: 344: unsigned char SharpPower = 0b01001000;
+   747  05AC  3048               	movlw	72
+   748  05AD  00B1               	movwf	??_main
+   749  05AE  0831               	movf	??_main,w
+   750  05AF  00C3               	movwf	main@SharpPower
+   751                           
+   752                           ;main.c: 346: unsigned char ToshibaTV = 0b01000000;
+   753  05B0  3040               	movlw	64
+   754  05B1  00B1               	movwf	??_main
+   755  05B2  0831               	movf	??_main,w
+   756  05B3  00D4               	movwf	main@ToshibaTV
+   757                           
+   758                           ;main.c: 347: unsigned char ToshibaPower = 0b00010010;
+   759  05B4  3012               	movlw	18
+   760  05B5  00B1               	movwf	??_main
+   761  05B6  0831               	movf	??_main,w
+   762  05B7  00C4               	movwf	main@ToshibaPower
+   763                           
+   764                           ;main.c: 348: unsigned char ToshibaUp = 0b00011010;
+   765  05B8  301A               	movlw	26
+   766  05B9  00B1               	movwf	??_main
+   767  05BA  0831               	movf	??_main,w
+   768  05BB  00C5               	movwf	main@ToshibaUp
+   769                           
+   770                           ;main.c: 349: unsigned char ToshibaDown = 0b00011110;
+   771  05BC  301E               	movlw	30
+   772  05BD  00B1               	movwf	??_main
+   773  05BE  0831               	movf	??_main,w
+   774  05BF  00C6               	movwf	main@ToshibaDown
+   775                           
+   776                           ;main.c: 351: unsigned char RC5Down = 0b00100010;
+   777  05C0  3022               	movlw	34
+   778  05C1  00B1               	movwf	??_main
+   779  05C2  0831               	movf	??_main,w
+   780  05C3  00C7               	movwf	main@RC5Down
+   781                           
+   782                           ;main.c: 352: unsigned char RC5Power = 0b00001100;
+   783  05C4  300C               	movlw	12
+   784  05C5  00B1               	movwf	??_main
+   785  05C6  0831               	movf	??_main,w
+   786  05C7  00C8               	movwf	main@RC5Power
+   787                           
+   788                           ;main.c: 353: unsigned char RC5Up = 0b00000010;
+   789  05C8  3002               	movlw	2
+   790  05C9  00B1               	movwf	??_main
+   791  05CA  0831               	movf	??_main,w
+   792  05CB  00C9               	movwf	main@RC5Up
+   793                           
+   794                           ;main.c: 354: unsigned char RC5TV = 0b00010000;
+   795  05CC  3010               	movlw	16
+   796  05CD  00B1               	movwf	??_main
+   797  05CE  0831               	movf	??_main,w
+   798  05CF  00D5               	movwf	main@RC5TV
+   799  05D0                     L1:	
+   800                           
+   801                           ;main.c: 355: unsigned char cflip = 0;
+   802  05D0  01D6               	clrf	main@cflip
+   803  05D1                     l1728:	
+   804                           ;main.c: 357: while (1) {
+   805                           
+   806                           
+   807                           ;main.c: 358: GP2 = 1;
+   808  05D1  1505               	bsf	5,2	;volatile
+   809                           
+   810                           ;main.c: 359: GP0 = 0;
+   811  05D2  1005               	bcf	5,0	;volatile
+   812                           
+   813                           ;main.c: 360: GP5 = 0;
+   814  05D3  1285               	bcf	5,5	;volatile
+   815                           
+   816                           ;main.c: 362: if (GP1 == 0) {
+   817  05D4  1C85               	btfss	5,1	;volatile
+   818  05D5  2E7E               	goto	l1756
+   819  05D6  2E8B               	goto	l1766
+   820  05D7                     l1738:	
+   821                           ;main.c: 363: while (GP1 == 0) {
+   822                           
+   823                           
+   824                           ;main.c: 364: derp(SonyTV, SonyDown, 1, 0, 25);
+   825  05D7  0839               	movf	main@SonyDown,w
+   826  05D8  00B1               	movwf	??_main
+   827  05D9  0831               	movf	??_main,w
+   828  05DA  00F7               	movwf	derp@cCommand
+   829  05DB  01F8               	clrf	derp@c
+   830  05DC  0AF8               	incf	derp@c,f
+   831  05DD  01F9               	clrf	derp@flip
+   832  05DE  3019               	movlw	25
+   833  05DF  00FA               	movwf	derp@nDelay
+   834  05E0  3000               	movlw	0
+   835  05E1  00FB               	movwf	derp@nDelay+1
+   836  05E2  084C               	movf	main@SonyTV,w
+   837  05E3  215A               	fcall	_derp
+   838                           
+   839                           ;main.c: 365: _delay((unsigned long)((10)*(4000000/4000.0)));
+   840  05E4  300D               	movlw	13
+   841  05E5  1283               	bcf	3,5	;RP0=0, select bank0
+   842  05E6  00B2               	movwf	??_main+1
+   843  05E7  30FB               	movlw	251
+   844  05E8  00B1               	movwf	??_main
+   845  05E9                     u1357:	
+   846  05E9  0BB1               	decfsz	??_main,f
+   847  05EA  2DE9               	goto	u1357
+   848  05EB  0BB2               	decfsz	??_main+1,f
+   849  05EC  2DE9               	goto	u1357
+   850  05ED  2DEE               	nop2
+   851                           
+   852                           ;main.c: 366: derp(RC5TV, RC5Down, 3, cflip, 114);
+   853  05EE  1283               	bcf	3,5	;RP0=0, select bank0
+   854  05EF  0847               	movf	main@RC5Down,w
+   855  05F0  00B1               	movwf	??_main
+   856  05F1  0831               	movf	??_main,w
+   857  05F2  00F7               	movwf	derp@cCommand
+   858  05F3  3003               	movlw	3
+   859  05F4  00B2               	movwf	??_main+1
+   860  05F5  0832               	movf	??_main+1,w
+   861  05F6  00F8               	movwf	derp@c
+   862  05F7  0856               	movf	main@cflip,w
+   863  05F8  00B3               	movwf	??_main+2
+   864  05F9  0833               	movf	??_main+2,w
+   865  05FA  00F9               	movwf	derp@flip
+   866  05FB  3072               	movlw	114
+   867  05FC  00FA               	movwf	derp@nDelay
+   868  05FD  3000               	movlw	0
+   869  05FE  00FB               	movwf	derp@nDelay+1
+   870  05FF  0855               	movf	main@RC5TV,w
+   871  0600  215A               	fcall	_derp
+   872                           
+   873                           ;main.c: 367: _delay((unsigned long)((10)*(4000000/4000.0)));
+   874  0601  300D               	movlw	13
+   875  0602  1283               	bcf	3,5	;RP0=0, select bank0
+   876  0603  00B2               	movwf	??_main+1
+   877  0604  30FB               	movlw	251
+   878  0605  00B1               	movwf	??_main
+   879  0606                     u1367:	
+   880  0606  0BB1               	decfsz	??_main,f
+   881  0607  2E06               	goto	u1367
+   882  0608  0BB2               	decfsz	??_main+1,f
+   883  0609  2E06               	goto	u1367
+   884  060A  2E0B               	nop2
+   885                           
+   886                           ;main.c: 368: derp(RelisysTV, RelisysDown, 2, 0, 140);
+   887  060B  1283               	bcf	3,5	;RP0=0, select bank0
+   888  060C  083D               	movf	main@RelisysDown,w
+   889  060D  00B1               	movwf	??_main
+   890  060E  0831               	movf	??_main,w
+   891  060F  00F7               	movwf	derp@cCommand
+   892  0610  3002               	movlw	2
+   893  0611  00B2               	movwf	??_main+1
+   894  0612  0832               	movf	??_main+1,w
+   895  0613  00F8               	movwf	derp@c
+   896  0614  01F9               	clrf	derp@flip
+   897  0615  308C               	movlw	140
+   898  0616  00FA               	movwf	derp@nDelay
+   899  0617  3000               	movlw	0
+   900  0618  00FB               	movwf	derp@nDelay+1
+   901  0619  084D               	movf	main@RelisysTV,w
+   902  061A  215A               	fcall	_derp
+   903                           
+   904                           ;main.c: 369: _delay((unsigned long)((10)*(4000000/4000.0)));
+   905  061B  300D               	movlw	13
+   906  061C  1283               	bcf	3,5	;RP0=0, select bank0
+   907  061D  00B2               	movwf	??_main+1
+   908  061E  30FB               	movlw	251
+   909  061F  00B1               	movwf	??_main
+   910  0620                     u1377:	
+   911  0620  0BB1               	decfsz	??_main,f
+   912  0621  2E20               	goto	u1377
+   913  0622  0BB2               	decfsz	??_main+1,f
+   914  0623  2E20               	goto	u1377
+   915  0624  2E25               	nop2
+   916                           
+   917                           ;main.c: 370: panasonic(PanasonicTV, PanasonicTV2, PanasonicTV3, PanasonicTV4, Panasonic
+      +                          Down, PanasonicDown2, PanasonicFinal);
+   918  0625  1283               	bcf	3,5	;RP0=0, select bank0
+   919  0626  084F               	movf	main@PanasonicTV2,w
+   920  0627  00B1               	movwf	??_main
+   921  0628  0831               	movf	??_main,w
+   922  0629  00F2               	movwf	panasonic@PanasonicTV2
+   923  062A  0850               	movf	main@PanasonicTV3,w
+   924  062B  00B2               	movwf	??_main+1
+   925  062C  0832               	movf	??_main+1,w
+   926  062D  00F3               	movwf	panasonic@PanasonicTV3
+   927  062E  0851               	movf	main@PanasonicTV4,w
+   928  062F  00B3               	movwf	??_main+2
+   929  0630  0833               	movf	??_main+2,w
+   930  0631  00F4               	movwf	panasonic@PanasonicTV4
+   931  0632  084A               	movf	main@PanasonicDown,w
+   932  0633  00B4               	movwf	??_main+3
+   933  0634  0834               	movf	??_main+3,w
+   934  0635  00F5               	movwf	panasonic@PanasonicCommand
+   935  0636  084B               	movf	main@PanasonicDown2,w
+   936  0637  00B5               	movwf	??_main+4
+   937  0638  0835               	movf	??_main+4,w
+   938  0639  00F6               	movwf	panasonic@PanasonicCommand2
+   939  063A  0852               	movf	main@PanasonicFinal,w
+   940  063B  00B6               	movwf	??_main+5
+   941  063C  0836               	movf	??_main+5,w
+   942  063D  00F7               	movwf	panasonic@PanasonicFinal
+   943  063E  084E               	movf	main@PanasonicTV,w
+   944  063F  21AF               	fcall	_panasonic
+   945                           
+   946                           ;main.c: 372: _delay((unsigned long)((10)*(4000000/4000.0)));
+   947  0640  300D               	movlw	13
+   948  0641  1283               	bcf	3,5	;RP0=0, select bank0
+   949  0642  00B2               	movwf	??_main+1
+   950  0643  30FB               	movlw	251
+   951  0644  00B1               	movwf	??_main
+   952  0645                     u1387:	
+   953  0645  0BB1               	decfsz	??_main,f
+   954  0646  2E45               	goto	u1387
+   955  0647  0BB2               	decfsz	??_main+1,f
+   956  0648  2E45               	goto	u1387
+   957  0649  2E4A               	nop2
+   958                           
+   959                           ;main.c: 373: derp(SharpTV, SharpDown, 2, 0, 140);
+   960  064A  1283               	bcf	3,5	;RP0=0, select bank0
+   961  064B  0842               	movf	main@SharpDown,w
+   962  064C  00B1               	movwf	??_main
+   963  064D  0831               	movf	??_main,w
+   964  064E  00F7               	movwf	derp@cCommand
+   965  064F  3002               	movlw	2
+   966  0650  00B2               	movwf	??_main+1
+   967  0651  0832               	movf	??_main+1,w
+   968  0652  00F8               	movwf	derp@c
+   969  0653  01F9               	clrf	derp@flip
+   970  0654  308C               	movlw	140
+   971  0655  00FA               	movwf	derp@nDelay
+   972  0656  3000               	movlw	0
+   973  0657  00FB               	movwf	derp@nDelay+1
+   974  0658  0853               	movf	main@SharpTV,w
+   975  0659  215A               	fcall	_derp
+   976                           
+   977                           ;main.c: 374: _delay((unsigned long)((10)*(4000000/4000.0)));
+   978  065A  300D               	movlw	13
+   979  065B  1283               	bcf	3,5	;RP0=0, select bank0
+   980  065C  00B2               	movwf	??_main+1
+   981  065D  30FB               	movlw	251
+   982  065E  00B1               	movwf	??_main
+   983  065F                     u1397:	
+   984  065F  0BB1               	decfsz	??_main,f
+   985  0660  2E5F               	goto	u1397
+   986  0661  0BB2               	decfsz	??_main+1,f
+   987  0662  2E5F               	goto	u1397
+   988  0663  2E64               	nop2
+   989                           
+   990                           ;main.c: 375: derp(ToshibaTV, ToshibaDown, 2, 0, 140);
+   991  0664  1283               	bcf	3,5	;RP0=0, select bank0
+   992  0665  0846               	movf	main@ToshibaDown,w
+   993  0666  00B1               	movwf	??_main
+   994  0667  0831               	movf	??_main,w
+   995  0668  00F7               	movwf	derp@cCommand
+   996  0669  3002               	movlw	2
+   997  066A  00B2               	movwf	??_main+1
+   998  066B  0832               	movf	??_main+1,w
+   999  066C  00F8               	movwf	derp@c
+  1000  066D  01F9               	clrf	derp@flip
+  1001  066E  308C               	movlw	140
+  1002  066F  00FA               	movwf	derp@nDelay
+  1003  0670  3000               	movlw	0
+  1004  0671  00FB               	movwf	derp@nDelay+1
+  1005  0672  0854               	movf	main@ToshibaTV,w
+  1006  0673  215A               	fcall	_derp
+  1007                           
+  1008                           ;main.c: 376: _delay((unsigned long)((10)*(4000000/4000.0)));
+  1009  0674  300D               	movlw	13
+  1010  0675  1283               	bcf	3,5	;RP0=0, select bank0
+  1011  0676  00B2               	movwf	??_main+1
+  1012  0677  30FB               	movlw	251
+  1013  0678  00B1               	movwf	??_main
+  1014  0679                     u1407:	
+  1015  0679  0BB1               	decfsz	??_main,f
+  1016  067A  2E79               	goto	u1407
+  1017  067B  0BB2               	decfsz	??_main+1,f
+  1018  067C  2E79               	goto	u1407
+  1019  067D  2E7E               	nop2
+  1020  067E                     l1756:	
+  1021  067E  1283               	bcf	3,5	;RP0=0, select bank0
+  1022  067F  1C85               	btfss	5,1	;volatile
+  1023  0680  2DD7               	goto	l1738
+  1024                           
+  1025                           ;main.c: 377: }
+  1026                           ;main.c: 378: if (cflip == 0) {
+  1027  0681  08D6               	movf	main@cflip,f
+  1028  0682  1D03               	skipz
+  1029  0683  2E87               	goto	l1762
+  1030                           
+  1031                           ;main.c: 379: cflip = 1;
+  1032  0684  01D6               	clrf	main@cflip
+  1033  0685  0AD6               	incf	main@cflip,f
+  1034                           
+  1035                           ;main.c: 380: } else if (cflip == 1) {
+  1036  0686  2E8B               	goto	l1766
+  1037  0687                     l1762:	
+  1038  0687  0856               	movf	main@cflip,w
+  1039  0688  3A01               	xorlw	1
+  1040  0689  1903               	btfsc	3,2
+  1041                           
+  1042                           ;main.c: 381: cflip = 0;
+  1043  068A  01D6               	clrf	main@cflip
+  1044  068B                     l1766:	
+  1045                           
+  1046                           ;main.c: 382: }
+  1047                           ;main.c: 383: }
+  1048                           ;main.c: 384: if (GP3 == 0) {
+  1049  068B  1D85               	btfss	5,3	;volatile
+  1050  068C  2F35               	goto	l1788
+  1051  068D  2F42               	goto	l1798
+  1052  068E                     l1770:	
+  1053                           ;main.c: 385: while (GP3 == 0) {
+  1054                           
+  1055                           
+  1056                           ;main.c: 386: derp(SonyTV, SonyPower, 1, 0, 25);
+  1057  068E  083A               	movf	main@SonyPower,w
+  1058  068F  00B1               	movwf	??_main
+  1059  0690  0831               	movf	??_main,w
+  1060  0691  00F7               	movwf	derp@cCommand
+  1061  0692  01F8               	clrf	derp@c
+  1062  0693  0AF8               	incf	derp@c,f
+  1063  0694  01F9               	clrf	derp@flip
+  1064  0695  3019               	movlw	25
+  1065  0696  00FA               	movwf	derp@nDelay
+  1066  0697  3000               	movlw	0
+  1067  0698  00FB               	movwf	derp@nDelay+1
+  1068  0699  084C               	movf	main@SonyTV,w
+  1069  069A  215A               	fcall	_derp
+  1070                           
+  1071                           ;main.c: 387: _delay((unsigned long)((10)*(4000000/4000.0)));
+  1072  069B  300D               	movlw	13
+  1073  069C  1283               	bcf	3,5	;RP0=0, select bank0
+  1074  069D  00B2               	movwf	??_main+1
+  1075  069E  30FB               	movlw	251
+  1076  069F  00B1               	movwf	??_main
+  1077  06A0                     u1417:	
+  1078  06A0  0BB1               	decfsz	??_main,f
+  1079  06A1  2EA0               	goto	u1417
+  1080  06A2  0BB2               	decfsz	??_main+1,f
+  1081  06A3  2EA0               	goto	u1417
+  1082  06A4  2EA5               	nop2
+  1083                           
+  1084                           ;main.c: 388: derp(RC5TV, RC5Power, 3, cflip, 114);
+  1085  06A5  1283               	bcf	3,5	;RP0=0, select bank0
+  1086  06A6  0848               	movf	main@RC5Power,w
+  1087  06A7  00B1               	movwf	??_main
+  1088  06A8  0831               	movf	??_main,w
+  1089  06A9  00F7               	movwf	derp@cCommand
+  1090  06AA  3003               	movlw	3
+  1091  06AB  00B2               	movwf	??_main+1
+  1092  06AC  0832               	movf	??_main+1,w
+  1093  06AD  00F8               	movwf	derp@c
+  1094  06AE  0856               	movf	main@cflip,w
+  1095  06AF  00B3               	movwf	??_main+2
+  1096  06B0  0833               	movf	??_main+2,w
+  1097  06B1  00F9               	movwf	derp@flip
+  1098  06B2  3072               	movlw	114
+  1099  06B3  00FA               	movwf	derp@nDelay
+  1100  06B4  3000               	movlw	0
+  1101  06B5  00FB               	movwf	derp@nDelay+1
+  1102  06B6  0855               	movf	main@RC5TV,w
+  1103  06B7  215A               	fcall	_derp
+  1104                           
+  1105                           ;main.c: 389: _delay((unsigned long)((10)*(4000000/4000.0)));
+  1106  06B8  300D               	movlw	13
+  1107  06B9  1283               	bcf	3,5	;RP0=0, select bank0
+  1108  06BA  00B2               	movwf	??_main+1
+  1109  06BB  30FB               	movlw	251
+  1110  06BC  00B1               	movwf	??_main
+  1111  06BD                     u1427:	
+  1112  06BD  0BB1               	decfsz	??_main,f
+  1113  06BE  2EBD               	goto	u1427
+  1114  06BF  0BB2               	decfsz	??_main+1,f
+  1115  06C0  2EBD               	goto	u1427
+  1116  06C1  2EC2               	nop2
+  1117                           
+  1118                           ;main.c: 390: derp(RelisysTV, RelisysPower, 2, 0, 140);
+  1119  06C2  1283               	bcf	3,5	;RP0=0, select bank0
+  1120  06C3  083E               	movf	main@RelisysPower,w
+  1121  06C4  00B1               	movwf	??_main
+  1122  06C5  0831               	movf	??_main,w
+  1123  06C6  00F7               	movwf	derp@cCommand
+  1124  06C7  3002               	movlw	2
+  1125  06C8  00B2               	movwf	??_main+1
+  1126  06C9  0832               	movf	??_main+1,w
+  1127  06CA  00F8               	movwf	derp@c
+  1128  06CB  01F9               	clrf	derp@flip
+  1129  06CC  308C               	movlw	140
+  1130  06CD  00FA               	movwf	derp@nDelay
+  1131  06CE  3000               	movlw	0
+  1132  06CF  00FB               	movwf	derp@nDelay+1
+  1133  06D0  084D               	movf	main@RelisysTV,w
+  1134  06D1  215A               	fcall	_derp
+  1135                           
+  1136                           ;main.c: 391: _delay((unsigned long)((10)*(4000000/4000.0)));
+  1137  06D2  300D               	movlw	13
+  1138  06D3  1283               	bcf	3,5	;RP0=0, select bank0
+  1139  06D4  00B2               	movwf	??_main+1
+  1140  06D5  30FB               	movlw	251
+  1141  06D6  00B1               	movwf	??_main
+  1142  06D7                     u1437:	
+  1143  06D7  0BB1               	decfsz	??_main,f
+  1144  06D8  2ED7               	goto	u1437
+  1145  06D9  0BB2               	decfsz	??_main+1,f
+  1146  06DA  2ED7               	goto	u1437
+  1147  06DB  2EDC               	nop2
+  1148                           
+  1149                           ;main.c: 392: panasonic(PanasonicTV, PanasonicTV2, PanasonicTV3, PanasonicTV4, Panasonic
+      +                          Power, PanasonicPower2, PanasonicFinal);
+  1150  06DC  1283               	bcf	3,5	;RP0=0, select bank0
+  1151  06DD  084F               	movf	main@PanasonicTV2,w
+  1152  06DE  00B1               	movwf	??_main
+  1153  06DF  0831               	movf	??_main,w
+  1154  06E0  00F2               	movwf	panasonic@PanasonicTV2
+  1155  06E1  0850               	movf	main@PanasonicTV3,w
+  1156  06E2  00B2               	movwf	??_main+1
+  1157  06E3  0832               	movf	??_main+1,w
+  1158  06E4  00F3               	movwf	panasonic@PanasonicTV3
+  1159  06E5  0851               	movf	main@PanasonicTV4,w
+  1160  06E6  00B3               	movwf	??_main+2
+  1161  06E7  0833               	movf	??_main+2,w
+  1162  06E8  00F4               	movwf	panasonic@PanasonicTV4
+  1163  06E9  083F               	movf	main@PanasonicPower,w
+  1164  06EA  00B4               	movwf	??_main+3
+  1165  06EB  0834               	movf	??_main+3,w
+  1166  06EC  00F5               	movwf	panasonic@PanasonicCommand
+  1167  06ED  0840               	movf	main@PanasonicPower2,w
+  1168  06EE  00B5               	movwf	??_main+4
+  1169  06EF  0835               	movf	??_main+4,w
+  1170  06F0  00F6               	movwf	panasonic@PanasonicCommand2
+  1171  06F1  0852               	movf	main@PanasonicFinal,w
+  1172  06F2  00B6               	movwf	??_main+5
+  1173  06F3  0836               	movf	??_main+5,w
+  1174  06F4  00F7               	movwf	panasonic@PanasonicFinal
+  1175  06F5  084E               	movf	main@PanasonicTV,w
+  1176  06F6  21AF               	fcall	_panasonic
+  1177                           
+  1178                           ;main.c: 394: _delay((unsigned long)((10)*(4000000/4000.0)));
+  1179  06F7  300D               	movlw	13
+  1180  06F8  1283               	bcf	3,5	;RP0=0, select bank0
+  1181  06F9  00B2               	movwf	??_main+1
+  1182  06FA  30FB               	movlw	251
+  1183  06FB  00B1               	movwf	??_main
+  1184  06FC                     u1447:	
+  1185  06FC  0BB1               	decfsz	??_main,f
+  1186  06FD  2EFC               	goto	u1447
+  1187  06FE  0BB2               	decfsz	??_main+1,f
+  1188  06FF  2EFC               	goto	u1447
+  1189  0700  2F01               	nop2
+  1190                           
+  1191                           ;main.c: 395: derp(SharpTV, SharpPower, 2, 0, 140);
+  1192  0701  1283               	bcf	3,5	;RP0=0, select bank0
+  1193  0702  0843               	movf	main@SharpPower,w
+  1194  0703  00B1               	movwf	??_main
+  1195  0704  0831               	movf	??_main,w
+  1196  0705  00F7               	movwf	derp@cCommand
+  1197  0706  3002               	movlw	2
+  1198  0707  00B2               	movwf	??_main+1
+  1199  0708  0832               	movf	??_main+1,w
+  1200  0709  00F8               	movwf	derp@c
+  1201  070A  01F9               	clrf	derp@flip
+  1202  070B  308C               	movlw	140
+  1203  070C  00FA               	movwf	derp@nDelay
+  1204  070D  3000               	movlw	0
+  1205  070E  00FB               	movwf	derp@nDelay+1
+  1206  070F  0853               	movf	main@SharpTV,w
+  1207  0710  215A               	fcall	_derp
+  1208                           
+  1209                           ;main.c: 396: _delay((unsigned long)((10)*(4000000/4000.0)));
+  1210  0711  300D               	movlw	13
+  1211  0712  1283               	bcf	3,5	;RP0=0, select bank0
+  1212  0713  00B2               	movwf	??_main+1
+  1213  0714  30FB               	movlw	251
+  1214  0715  00B1               	movwf	??_main
+  1215  0716                     u1457:	
+  1216  0716  0BB1               	decfsz	??_main,f
+  1217  0717  2F16               	goto	u1457
+  1218  0718  0BB2               	decfsz	??_main+1,f
+  1219  0719  2F16               	goto	u1457
+  1220  071A  2F1B               	nop2
+  1221                           
+  1222                           ;main.c: 397: derp(ToshibaTV, ToshibaPower, 2, 0, 140);
+  1223  071B  1283               	bcf	3,5	;RP0=0, select bank0
+  1224  071C  0844               	movf	main@ToshibaPower,w
+  1225  071D  00B1               	movwf	??_main
+  1226  071E  0831               	movf	??_main,w
+  1227  071F  00F7               	movwf	derp@cCommand
+  1228  0720  3002               	movlw	2
+  1229  0721  00B2               	movwf	??_main+1
+  1230  0722  0832               	movf	??_main+1,w
+  1231  0723  00F8               	movwf	derp@c
+  1232  0724  01F9               	clrf	derp@flip
+  1233  0725  308C               	movlw	140
+  1234  0726  00FA               	movwf	derp@nDelay
+  1235  0727  3000               	movlw	0
+  1236  0728  00FB               	movwf	derp@nDelay+1
+  1237  0729  0854               	movf	main@ToshibaTV,w
+  1238  072A  215A               	fcall	_derp
+  1239                           
+  1240                           ;main.c: 398: _delay((unsigned long)((10)*(4000000/4000.0)));
+  1241  072B  300D               	movlw	13
+  1242  072C  1283               	bcf	3,5	;RP0=0, select bank0
+  1243  072D  00B2               	movwf	??_main+1
+  1244  072E  30FB               	movlw	251
+  1245  072F  00B1               	movwf	??_main
+  1246  0730                     u1467:	
+  1247  0730  0BB1               	decfsz	??_main,f
+  1248  0731  2F30               	goto	u1467
+  1249  0732  0BB2               	decfsz	??_main+1,f
+  1250  0733  2F30               	goto	u1467
+  1251  0734  2F35               	nop2
+  1252  0735                     l1788:	
+  1253  0735  1283               	bcf	3,5	;RP0=0, select bank0
+  1254  0736  1D85               	btfss	5,3	;volatile
+  1255  0737  2E8E               	goto	l1770
+  1256                           
+  1257                           ;main.c: 399: }
+  1258                           ;main.c: 400: if (cflip == 0) {
+  1259  0738  08D6               	movf	main@cflip,f
+  1260  0739  1D03               	skipz
+  1261  073A  2F3E               	goto	l1794
+  1262                           
+  1263                           ;main.c: 401: cflip = 1;
+  1264  073B  01D6               	clrf	main@cflip
+  1265  073C  0AD6               	incf	main@cflip,f
+  1266                           
+  1267                           ;main.c: 402: } else if (cflip == 1) {
+  1268  073D  2F42               	goto	l1798
+  1269  073E                     l1794:	
+  1270  073E  0856               	movf	main@cflip,w
+  1271  073F  3A01               	xorlw	1
+  1272  0740  1903               	btfsc	3,2
+  1273                           
+  1274                           ;main.c: 403: cflip = 0;
+  1275  0741  01D6               	clrf	main@cflip
+  1276  0742                     l1798:	
+  1277                           
+  1278                           ;main.c: 404: }
+  1279                           ;main.c: 405: }
+  1280                           ;main.c: 406: if (GP4 == 0) {
+  1281  0742  1E05               	btfss	5,4	;volatile
+  1282  0743  2FEC               	goto	l1820
+  1283  0744  2DD1               	goto	l1728
+  1284  0745                     l1802:	
+  1285                           ;main.c: 407: while (GP4 == 0) {
+  1286                           
+  1287                           
+  1288                           ;main.c: 408: derp(SonyTV, SonyUp, 1, 0, 25);
+  1289  0745  083B               	movf	main@SonyUp,w
+  1290  0746  00B1               	movwf	??_main
+  1291  0747  0831               	movf	??_main,w
+  1292  0748  00F7               	movwf	derp@cCommand
+  1293  0749  01F8               	clrf	derp@c
+  1294  074A  0AF8               	incf	derp@c,f
+  1295  074B  01F9               	clrf	derp@flip
+  1296  074C  3019               	movlw	25
+  1297  074D  00FA               	movwf	derp@nDelay
+  1298  074E  3000               	movlw	0
+  1299  074F  00FB               	movwf	derp@nDelay+1
+  1300  0750  084C               	movf	main@SonyTV,w
+  1301  0751  215A               	fcall	_derp
+  1302                           
+  1303                           ;main.c: 409: _delay((unsigned long)((10)*(4000000/4000.0)));
+  1304  0752  300D               	movlw	13
+  1305  0753  1283               	bcf	3,5	;RP0=0, select bank0
+  1306  0754  00B2               	movwf	??_main+1
+  1307  0755  30FB               	movlw	251
+  1308  0756  00B1               	movwf	??_main
+  1309  0757                     u1477:	
+  1310  0757  0BB1               	decfsz	??_main,f
+  1311  0758  2F57               	goto	u1477
+  1312  0759  0BB2               	decfsz	??_main+1,f
+  1313  075A  2F57               	goto	u1477
+  1314  075B  2F5C               	nop2
+  1315                           
+  1316                           ;main.c: 410: derp(RC5TV, RC5Up, 3, cflip, 114);
+  1317  075C  1283               	bcf	3,5	;RP0=0, select bank0
+  1318  075D  0849               	movf	main@RC5Up,w
+  1319  075E  00B1               	movwf	??_main
+  1320  075F  0831               	movf	??_main,w
+  1321  0760  00F7               	movwf	derp@cCommand
+  1322  0761  3003               	movlw	3
+  1323  0762  00B2               	movwf	??_main+1
+  1324  0763  0832               	movf	??_main+1,w
+  1325  0764  00F8               	movwf	derp@c
+  1326  0765  0856               	movf	main@cflip,w
+  1327  0766  00B3               	movwf	??_main+2
+  1328  0767  0833               	movf	??_main+2,w
+  1329  0768  00F9               	movwf	derp@flip
+  1330  0769  3072               	movlw	114
+  1331  076A  00FA               	movwf	derp@nDelay
+  1332  076B  3000               	movlw	0
+  1333  076C  00FB               	movwf	derp@nDelay+1
+  1334  076D  0855               	movf	main@RC5TV,w
+  1335  076E  215A               	fcall	_derp
+  1336                           
+  1337                           ;main.c: 411: _delay((unsigned long)((10)*(4000000/4000.0)));
+  1338  076F  300D               	movlw	13
+  1339  0770  1283               	bcf	3,5	;RP0=0, select bank0
+  1340  0771  00B2               	movwf	??_main+1
+  1341  0772  30FB               	movlw	251
+  1342  0773  00B1               	movwf	??_main
+  1343  0774                     u1487:	
+  1344  0774  0BB1               	decfsz	??_main,f
+  1345  0775  2F74               	goto	u1487
+  1346  0776  0BB2               	decfsz	??_main+1,f
+  1347  0777  2F74               	goto	u1487
+  1348  0778  2F79               	nop2
+  1349                           
+  1350                           ;main.c: 412: derp(RelisysTV, RelisysUp, 2, 0, 140);
+  1351  0779  1283               	bcf	3,5	;RP0=0, select bank0
+  1352  077A  083C               	movf	main@RelisysUp,w
+  1353  077B  00B1               	movwf	??_main
+  1354  077C  0831               	movf	??_main,w
+  1355  077D  00F7               	movwf	derp@cCommand
+  1356  077E  3002               	movlw	2
+  1357  077F  00B2               	movwf	??_main+1
+  1358  0780  0832               	movf	??_main+1,w
+  1359  0781  00F8               	movwf	derp@c
+  1360  0782  01F9               	clrf	derp@flip
+  1361  0783  308C               	movlw	140
+  1362  0784  00FA               	movwf	derp@nDelay
+  1363  0785  3000               	movlw	0
+  1364  0786  00FB               	movwf	derp@nDelay+1
+  1365  0787  084D               	movf	main@RelisysTV,w
+  1366  0788  215A               	fcall	_derp
+  1367                           
+  1368                           ;main.c: 413: _delay((unsigned long)((10)*(4000000/4000.0)));
+  1369  0789  300D               	movlw	13
+  1370  078A  1283               	bcf	3,5	;RP0=0, select bank0
+  1371  078B  00B2               	movwf	??_main+1
+  1372  078C  30FB               	movlw	251
+  1373  078D  00B1               	movwf	??_main
+  1374  078E                     u1497:	
+  1375  078E  0BB1               	decfsz	??_main,f
+  1376  078F  2F8E               	goto	u1497
+  1377  0790  0BB2               	decfsz	??_main+1,f
+  1378  0791  2F8E               	goto	u1497
+  1379  0792  2F93               	nop2
+  1380                           
+  1381                           ;main.c: 414: panasonic(PanasonicTV, PanasonicTV2, PanasonicTV3, PanasonicTV4, Panasonic
+      +                          Down, PanasonicDown2, PanasonicFinal);
+  1382  0793  1283               	bcf	3,5	;RP0=0, select bank0
+  1383  0794  084F               	movf	main@PanasonicTV2,w
+  1384  0795  00B1               	movwf	??_main
+  1385  0796  0831               	movf	??_main,w
+  1386  0797  00F2               	movwf	panasonic@PanasonicTV2
+  1387  0798  0850               	movf	main@PanasonicTV3,w
+  1388  0799  00B2               	movwf	??_main+1
+  1389  079A  0832               	movf	??_main+1,w
+  1390  079B  00F3               	movwf	panasonic@PanasonicTV3
+  1391  079C  0851               	movf	main@PanasonicTV4,w
+  1392  079D  00B3               	movwf	??_main+2
+  1393  079E  0833               	movf	??_main+2,w
+  1394  079F  00F4               	movwf	panasonic@PanasonicTV4
+  1395  07A0  084A               	movf	main@PanasonicDown,w
+  1396  07A1  00B4               	movwf	??_main+3
+  1397  07A2  0834               	movf	??_main+3,w
+  1398  07A3  00F5               	movwf	panasonic@PanasonicCommand
+  1399  07A4  084B               	movf	main@PanasonicDown2,w
+  1400  07A5  00B5               	movwf	??_main+4
+  1401  07A6  0835               	movf	??_main+4,w
+  1402  07A7  00F6               	movwf	panasonic@PanasonicCommand2
+  1403  07A8  0852               	movf	main@PanasonicFinal,w
+  1404  07A9  00B6               	movwf	??_main+5
+  1405  07AA  0836               	movf	??_main+5,w
+  1406  07AB  00F7               	movwf	panasonic@PanasonicFinal
+  1407  07AC  084E               	movf	main@PanasonicTV,w
+  1408  07AD  21AF               	fcall	_panasonic
+  1409                           
+  1410                           ;main.c: 416: _delay((unsigned long)((10)*(4000000/4000.0)));
+  1411  07AE  300D               	movlw	13
+  1412  07AF  1283               	bcf	3,5	;RP0=0, select bank0
+  1413  07B0  00B2               	movwf	??_main+1
+  1414  07B1  30FB               	movlw	251
+  1415  07B2  00B1               	movwf	??_main
+  1416  07B3                     u1507:	
+  1417  07B3  0BB1               	decfsz	??_main,f
+  1418  07B4  2FB3               	goto	u1507
+  1419  07B5  0BB2               	decfsz	??_main+1,f
+  1420  07B6  2FB3               	goto	u1507
+  1421  07B7  2FB8               	nop2
+  1422                           
+  1423                           ;main.c: 417: derp(SharpTV, SharpUp, 2, 0, 140);
+  1424  07B8  1283               	bcf	3,5	;RP0=0, select bank0
+  1425  07B9  0841               	movf	main@SharpUp,w
+  1426  07BA  00B1               	movwf	??_main
+  1427  07BB  0831               	movf	??_main,w
+  1428  07BC  00F7               	movwf	derp@cCommand
+  1429  07BD  3002               	movlw	2
+  1430  07BE  00B2               	movwf	??_main+1
+  1431  07BF  0832               	movf	??_main+1,w
+  1432  07C0  00F8               	movwf	derp@c
+  1433  07C1  01F9               	clrf	derp@flip
+  1434  07C2  308C               	movlw	140
+  1435  07C3  00FA               	movwf	derp@nDelay
+  1436  07C4  3000               	movlw	0
+  1437  07C5  00FB               	movwf	derp@nDelay+1
+  1438  07C6  0853               	movf	main@SharpTV,w
+  1439  07C7  215A               	fcall	_derp
+  1440                           
+  1441                           ;main.c: 418: _delay((unsigned long)((10)*(4000000/4000.0)));
+  1442  07C8  300D               	movlw	13
+  1443  07C9  1283               	bcf	3,5	;RP0=0, select bank0
+  1444  07CA  00B2               	movwf	??_main+1
+  1445  07CB  30FB               	movlw	251
+  1446  07CC  00B1               	movwf	??_main
+  1447  07CD                     u1517:	
+  1448  07CD  0BB1               	decfsz	??_main,f
+  1449  07CE  2FCD               	goto	u1517
+  1450  07CF  0BB2               	decfsz	??_main+1,f
+  1451  07D0  2FCD               	goto	u1517
+  1452  07D1  2FD2               	nop2
+  1453                           
+  1454                           ;main.c: 419: derp(ToshibaTV, ToshibaUp, 2, 0, 140);
+  1455  07D2  1283               	bcf	3,5	;RP0=0, select bank0
+  1456  07D3  0845               	movf	main@ToshibaUp,w
+  1457  07D4  00B1               	movwf	??_main
+  1458  07D5  0831               	movf	??_main,w
+  1459  07D6  00F7               	movwf	derp@cCommand
+  1460  07D7  3002               	movlw	2
+  1461  07D8  00B2               	movwf	??_main+1
+  1462  07D9  0832               	movf	??_main+1,w
+  1463  07DA  00F8               	movwf	derp@c
+  1464  07DB  01F9               	clrf	derp@flip
+  1465  07DC  308C               	movlw	140
+  1466  07DD  00FA               	movwf	derp@nDelay
+  1467  07DE  3000               	movlw	0
+  1468  07DF  00FB               	movwf	derp@nDelay+1
+  1469  07E0  0854               	movf	main@ToshibaTV,w
+  1470  07E1  215A               	fcall	_derp
+  1471                           
+  1472                           ;main.c: 420: _delay((unsigned long)((10)*(4000000/4000.0)));
+  1473  07E2  300D               	movlw	13
+  1474  07E3  1283               	bcf	3,5	;RP0=0, select bank0
+  1475  07E4  00B2               	movwf	??_main+1
+  1476  07E5  30FB               	movlw	251
+  1477  07E6  00B1               	movwf	??_main
+  1478  07E7                     u1527:	
+  1479  07E7  0BB1               	decfsz	??_main,f
+  1480  07E8  2FE7               	goto	u1527
+  1481  07E9  0BB2               	decfsz	??_main+1,f
+  1482  07EA  2FE7               	goto	u1527
+  1483  07EB  2FEC               	nop2
+  1484  07EC                     l1820:	
+  1485  07EC  1283               	bcf	3,5	;RP0=0, select bank0
+  1486  07ED  1E05               	btfss	5,4	;volatile
+  1487  07EE  2F45               	goto	l1802
+  1488                           
+  1489                           ;main.c: 421: }
+  1490                           ;main.c: 422: if (cflip == 0) {
+  1491  07EF  08D6               	movf	main@cflip,f
+  1492  07F0  1D03               	skipz
+  1493  07F1  2FF5               	goto	l1826
+  1494                           
+  1495                           ;main.c: 423: cflip = 1;
+  1496  07F2  01D6               	clrf	main@cflip
+  1497  07F3  0AD6               	incf	main@cflip,f
+  1498                           
+  1499                           ;main.c: 424: } else if (cflip == 1) {
+  1500  07F4  2DD1               	goto	l1728
+  1501  07F5                     l1826:	
+  1502  07F5  0856               	movf	main@cflip,w
+  1503  07F6  3A01               	xorlw	1
+  1504  07F7  1D03               	skipz
+  1505  07F8  2DD1               	goto	l1728
+  1506  07F9  2DD0               	goto	L1
+  1507  07FA                     __end_of_main:	
+  1508                           ;main.c: 425: cflip = 0;
+  1509                           
+  1510                           
+  1511                           	psect	text1
+  1512  01AF                     __ptext1:	
+  1513 ;; *************** function _panasonic *****************
+  1514 ;; Defined at:
+  1515 ;;		line 230 in file "main.c"
+  1516 ;; Parameters:    Size  Location     Type
+  1517 ;;  PanasonicTV     1    wreg     unsigned char 
+  1518 ;;  PanasonicTV2    1    2[COMMON] unsigned char 
+  1519 ;;  PanasonicTV3    1    3[COMMON] unsigned char 
+  1520 ;;  PanasonicTV4    1    4[COMMON] unsigned char 
+  1521 ;;  PanasonicCom    1    5[COMMON] unsigned char 
+  1522 ;;  PanasonicCom    1    6[COMMON] unsigned char 
+  1523 ;;  PanasonicFin    1    7[COMMON] unsigned char 
+  1524 ;; Auto vars:     Size  Location     Type
+  1525 ;;  PanasonicTV     1   14[BANK0 ] unsigned char 
+  1526 ;;  i               2   12[BANK0 ] int 
+  1527 ;;  i               2   10[BANK0 ] int 
+  1528 ;;  i               2    8[BANK0 ] int 
+  1529 ;;  i               2    6[BANK0 ] int 
+  1530 ;;  i               2    4[BANK0 ] int 
+  1531 ;;  i               2    2[BANK0 ] int 
+  1532 ;;  i               2    0[BANK0 ] int 
+  1533 ;; Return value:  Size  Location     Type
+  1534 ;;		None               void
+  1535 ;; Registers used:
+  1536 ;;		wreg, status,2, status,0, btemp+1, pclath, cstack
+  1537 ;; Tracked objects:
+  1538 ;;		On entry : 0/0
+  1539 ;;		On exit  : 0/0
+  1540 ;;		Unchanged: 0/0
+  1541 ;; Data sizes:     COMMON   BANK0   BANK1
+  1542 ;;      Params:         6       0       0
+  1543 ;;      Locals:         0      15       0
+  1544 ;;      Temps:          2       0       0
+  1545 ;;      Totals:         8      15       0
+  1546 ;;Total ram usage:       23 bytes
+  1547 ;; Hardware stack levels used:    1
+  1548 ;; Hardware stack levels required when called:    1
+  1549 ;; This function calls:
+  1550 ;;		_pingSony
+  1551 ;; This function is called by:
+  1552 ;;		_main
+  1553 ;; This function uses a non-reentrant model
+  1554 ;;
+  1555                           
+  1556                           
+  1557                           ;psect for function _panasonic
+  1558  01AF                     _panasonic:	
+  1559                           
+  1560                           ;incstack = 0
+  1561                           ; Regs used in _panasonic: [wreg+status,2+status,0+btemp+1+pclath+cstack]
+  1562                           ;panasonic@PanasonicTV stored from wreg
+  1563  01AF  1283               	bcf	3,5	;RP0=0, select bank0
+  1564  01B0  00AE               	movwf	panasonic@PanasonicTV
+  1565                           
+  1566                           ;main.c: 231: pingSony(142);
+  1567  01B1  308E               	movlw	142
+  1568  01B2  20FC               	fcall	_pingSony
+  1569                           
+  1570                           ;main.c: 232: _delay((unsigned long)((1650)*(4000000/4000000.0)));
+  1571  01B3  30EB               	movlw	235
+  1572  01B4  00F8               	movwf	??_panasonic
+  1573  01B5                     u1537:	
+  1574  01B5  29B6               	nop2
+  1575  01B6  29B7               	nop2
+  1576  01B7  0BF8               	decfsz	??_panasonic,f
+  1577  01B8  29B5               	goto	u1537
+  1578  01B9  29BA               	nop2	;nop
+  1579  01BA  29BB               	nop2	;nop
+  1580                           
+  1581                           ;main.c: 233: for (int i = 0;i<8;i++){
+  1582  01BB  1283               	bcf	3,5	;RP0=0, select bank0
+  1583  01BC  01A0               	clrf	panasonic@i
+  1584  01BD  01A1               	clrf	panasonic@i+1
+  1585  01BE  0821               	movf	panasonic@i+1,w
+  1586  01BF  3A80               	xorlw	128
+  1587  01C0  00FF               	movwf	127
+  1588  01C1  3080               	movlw	128
+  1589  01C2  027F               	subwf	127,w
+  1590  01C3  1D03               	skipz
+  1591  01C4  29C7               	goto	u1025
+  1592  01C5  3008               	movlw	8
+  1593  01C6  0220               	subwf	panasonic@i,w
+  1594  01C7                     u1025:	
+  1595  01C7  1803               	btfsc	3,0
+  1596  01C8  29FC               	goto	l1518
+  1597  01C9                     l1500:	
+  1598                           
+  1599                           ;main.c: 234: cTemp = PanasonicTV & 0b00000001;
+  1600  01C9  1283               	bcf	3,5	;RP0=0, select bank0
+  1601  01CA  082E               	movf	panasonic@PanasonicTV,w
+  1602  01CB  3901               	andlw	1
+  1603  01CC  00F8               	movwf	??_panasonic
+  1604  01CD  0878               	movf	??_panasonic,w
+  1605  01CE  00FC               	movwf	_cTemp
+  1606                           
+  1607                           ;main.c: 235: if (cTemp == 0) {
+  1608  01CF  08FC               	movf	_cTemp,f
+  1609  01D0  1D03               	skipz
+  1610  01D1  29DA               	goto	l1508
+  1611                           
+  1612                           ;main.c: 236: pingSony(20);
+  1613  01D2  3014               	movlw	20
+  1614  01D3  20FC               	fcall	_pingSony
+  1615                           
+  1616                           ;main.c: 237: _delay((unsigned long)((300)*(4000000/4000000.0)));
+  1617  01D4  3063               	movlw	99
+  1618  01D5  00F8               	movwf	??_panasonic
+  1619  01D6                     u1547:	
+  1620  01D6  0BF8               	decfsz	??_panasonic,f
+  1621  01D7  29D6               	goto	u1547
+  1622  01D8  29D9               	nop2	;nop
+  1623                           
+  1624                           ;main.c: 238: } else {
+  1625  01D9  29E3               	goto	l1512
+  1626  01DA                     l1508:	
+  1627                           
+  1628                           ;main.c: 239: pingSony(20);
+  1629  01DA  3014               	movlw	20
+  1630  01DB  20FC               	fcall	_pingSony
+  1631                           
+  1632                           ;main.c: 240: _delay((unsigned long)((1150)*(4000000/4000000.0)));
+  1633  01DC  30E5               	movlw	229
+  1634  01DD  00F8               	movwf	??_panasonic
+  1635  01DE                     u1557:	
+  1636  01DE  29DF               	nop2
+  1637  01DF  0BF8               	decfsz	??_panasonic,f
+  1638  01E0  29DE               	goto	u1557
+  1639  01E1  29E2               	nop2	;nop
+  1640  01E2  29E3               	nop2	;nop
+  1641  01E3                     l1512:	
+  1642                           
+  1643                           ;main.c: 241: }
+  1644                           ;main.c: 242: PanasonicTV = PanasonicTV >> 1;
+  1645  01E3  1283               	bcf	3,5	;RP0=0, select bank0
+  1646  01E4  082E               	movf	panasonic@PanasonicTV,w
+  1647  01E5  00F8               	movwf	??_panasonic
+  1648  01E6  1003               	clrc
+  1649  01E7  0C78               	rrf	??_panasonic,w
+  1650  01E8  00F9               	movwf	??_panasonic+1
+  1651  01E9  0879               	movf	??_panasonic+1,w
+  1652  01EA  00AE               	movwf	panasonic@PanasonicTV
+  1653  01EB  3001               	movlw	1
+  1654  01EC  07A0               	addwf	panasonic@i,f
+  1655  01ED  1803               	skipnc
+  1656  01EE  0AA1               	incf	panasonic@i+1,f
+  1657  01EF  3000               	movlw	0
+  1658  01F0  07A1               	addwf	panasonic@i+1,f
+  1659  01F1  0821               	movf	panasonic@i+1,w
+  1660  01F2  3A80               	xorlw	128
+  1661  01F3  00FF               	movwf	127
+  1662  01F4  3080               	movlw	128
+  1663  01F5  027F               	subwf	127,w
+  1664  01F6  1D03               	skipz
+  1665  01F7  29FA               	goto	u1045
+  1666  01F8  3008               	movlw	8
+  1667  01F9  0220               	subwf	panasonic@i,w
+  1668  01FA                     u1045:	
+  1669  01FA  1C03               	skipc
+  1670  01FB  29C9               	goto	l1500
+  1671  01FC                     l1518:	
+  1672                           
+  1673                           ;main.c: 243: }
+  1674                           ;main.c: 244: for (int i = 0;i<8;i++){
+  1675  01FC  1283               	bcf	3,5	;RP0=0, select bank0
+  1676  01FD  01A2               	clrf	panasonic@i_80
+  1677  01FE  01A3               	clrf	panasonic@i_80+1
+  1678  01FF  0823               	movf	panasonic@i_80+1,w
+  1679  0200  3A80               	xorlw	128
+  1680  0201  00FF               	movwf	127
+  1681  0202  3080               	movlw	128
+  1682  0203  027F               	subwf	127,w
+  1683  0204  1D03               	skipz
+  1684  0205  2A08               	goto	u1055
+  1685  0206  3008               	movlw	8
+  1686  0207  0222               	subwf	panasonic@i_80,w
+  1687  0208                     u1055:	
+  1688  0208  1803               	btfsc	3,0
+  1689  0209  2A3C               	goto	l1542
+  1690  020A                     l1524:	
+  1691                           
+  1692                           ;main.c: 245: cTemp = PanasonicTV2 & 0b00000001;
+  1693  020A  0872               	movf	panasonic@PanasonicTV2,w
+  1694  020B  3901               	andlw	1
+  1695  020C  00F8               	movwf	??_panasonic
+  1696  020D  0878               	movf	??_panasonic,w
+  1697  020E  00FC               	movwf	_cTemp
+  1698                           
+  1699                           ;main.c: 246: if (cTemp == 0) {
+  1700  020F  08FC               	movf	_cTemp,f
+  1701  0210  1D03               	skipz
+  1702  0211  2A1A               	goto	l1532
+  1703                           
+  1704                           ;main.c: 247: pingSony(20);
+  1705  0212  3014               	movlw	20
+  1706  0213  20FC               	fcall	_pingSony
+  1707                           
+  1708                           ;main.c: 248: _delay((unsigned long)((300)*(4000000/4000000.0)));
+  1709  0214  3063               	movlw	99
+  1710  0215  00F8               	movwf	??_panasonic
+  1711  0216                     u1567:	
+  1712  0216  0BF8               	decfsz	??_panasonic,f
+  1713  0217  2A16               	goto	u1567
+  1714  0218  2A19               	nop2	;nop
+  1715                           
+  1716                           ;main.c: 249: } else {
+  1717  0219  2A23               	goto	l1536
+  1718  021A                     l1532:	
+  1719                           
+  1720                           ;main.c: 250: pingSony(20);
+  1721  021A  3014               	movlw	20
+  1722  021B  20FC               	fcall	_pingSony
+  1723                           
+  1724                           ;main.c: 251: _delay((unsigned long)((1150)*(4000000/4000000.0)));
+  1725  021C  30E5               	movlw	229
+  1726  021D  00F8               	movwf	??_panasonic
+  1727  021E                     u1577:	
+  1728  021E  2A1F               	nop2
+  1729  021F  0BF8               	decfsz	??_panasonic,f
+  1730  0220  2A1E               	goto	u1577
+  1731  0221  2A22               	nop2	;nop
+  1732  0222  2A23               	nop2	;nop
+  1733  0223                     l1536:	
+  1734                           
+  1735                           ;main.c: 252: }
+  1736                           ;main.c: 253: PanasonicTV2 = PanasonicTV2 >> 1;
+  1737  0223  0872               	movf	panasonic@PanasonicTV2,w
+  1738  0224  00F8               	movwf	??_panasonic
+  1739  0225  1003               	clrc
+  1740  0226  0C78               	rrf	??_panasonic,w
+  1741  0227  00F9               	movwf	??_panasonic+1
+  1742  0228  0879               	movf	??_panasonic+1,w
+  1743  0229  00F2               	movwf	panasonic@PanasonicTV2
+  1744  022A  3001               	movlw	1
+  1745  022B  1283               	bcf	3,5	;RP0=0, select bank0
+  1746  022C  07A2               	addwf	panasonic@i_80,f
+  1747  022D  1803               	skipnc
+  1748  022E  0AA3               	incf	panasonic@i_80+1,f
+  1749  022F  3000               	movlw	0
+  1750  0230  07A3               	addwf	panasonic@i_80+1,f
+  1751  0231  0823               	movf	panasonic@i_80+1,w
+  1752  0232  3A80               	xorlw	128
+  1753  0233  00FF               	movwf	127
+  1754  0234  3080               	movlw	128
+  1755  0235  027F               	subwf	127,w
+  1756  0236  1D03               	skipz
+  1757  0237  2A3A               	goto	u1075
+  1758  0238  3008               	movlw	8
+  1759  0239  0222               	subwf	panasonic@i_80,w
+  1760  023A                     u1075:	
+  1761  023A  1C03               	skipc
+  1762  023B  2A0A               	goto	l1524
+  1763  023C                     l1542:	
+  1764                           
+  1765                           ;main.c: 254: }
+  1766                           ;main.c: 255: for (int i = 0;i<8;i++){
+  1767  023C  1283               	bcf	3,5	;RP0=0, select bank0
+  1768  023D  01A4               	clrf	panasonic@i_81
+  1769  023E  01A5               	clrf	panasonic@i_81+1
+  1770  023F  0825               	movf	panasonic@i_81+1,w
+  1771  0240  3A80               	xorlw	128
+  1772  0241  00FF               	movwf	127
+  1773  0242  3080               	movlw	128
+  1774  0243  027F               	subwf	127,w
+  1775  0244  1D03               	skipz
+  1776  0245  2A48               	goto	u1085
+  1777  0246  3008               	movlw	8
+  1778  0247  0224               	subwf	panasonic@i_81,w
+  1779  0248                     u1085:	
+  1780  0248  1803               	btfsc	3,0
+  1781  0249  2A7C               	goto	l1566
+  1782  024A                     l1548:	
+  1783                           
+  1784                           ;main.c: 256: cTemp = PanasonicTV3 & 0b00000001;
+  1785  024A  0873               	movf	panasonic@PanasonicTV3,w
+  1786  024B  3901               	andlw	1
+  1787  024C  00F8               	movwf	??_panasonic
+  1788  024D  0878               	movf	??_panasonic,w
+  1789  024E  00FC               	movwf	_cTemp
+  1790                           
+  1791                           ;main.c: 257: if (cTemp == 0) {
+  1792  024F  08FC               	movf	_cTemp,f
+  1793  0250  1D03               	skipz
+  1794  0251  2A5A               	goto	l1556
+  1795                           
+  1796                           ;main.c: 258: pingSony(20);
+  1797  0252  3014               	movlw	20
+  1798  0253  20FC               	fcall	_pingSony
+  1799                           
+  1800                           ;main.c: 259: _delay((unsigned long)((300)*(4000000/4000000.0)));
+  1801  0254  3063               	movlw	99
+  1802  0255  00F8               	movwf	??_panasonic
+  1803  0256                     u1587:	
+  1804  0256  0BF8               	decfsz	??_panasonic,f
+  1805  0257  2A56               	goto	u1587
+  1806  0258  2A59               	nop2	;nop
+  1807                           
+  1808                           ;main.c: 260: } else {
+  1809  0259  2A63               	goto	l1560
+  1810  025A                     l1556:	
+  1811                           
+  1812                           ;main.c: 261: pingSony(20);
+  1813  025A  3014               	movlw	20
+  1814  025B  20FC               	fcall	_pingSony
+  1815                           
+  1816                           ;main.c: 262: _delay((unsigned long)((1150)*(4000000/4000000.0)));
+  1817  025C  30E5               	movlw	229
+  1818  025D  00F8               	movwf	??_panasonic
+  1819  025E                     u1597:	
+  1820  025E  2A5F               	nop2
+  1821  025F  0BF8               	decfsz	??_panasonic,f
+  1822  0260  2A5E               	goto	u1597
+  1823  0261  2A62               	nop2	;nop
+  1824  0262  2A63               	nop2	;nop
+  1825  0263                     l1560:	
+  1826                           
+  1827                           ;main.c: 263: }
+  1828                           ;main.c: 264: PanasonicTV3 = PanasonicTV3 >> 1;
+  1829  0263  0873               	movf	panasonic@PanasonicTV3,w
+  1830  0264  00F8               	movwf	??_panasonic
+  1831  0265  1003               	clrc
+  1832  0266  0C78               	rrf	??_panasonic,w
+  1833  0267  00F9               	movwf	??_panasonic+1
+  1834  0268  0879               	movf	??_panasonic+1,w
+  1835  0269  00F3               	movwf	panasonic@PanasonicTV3
+  1836  026A  3001               	movlw	1
+  1837  026B  1283               	bcf	3,5	;RP0=0, select bank0
+  1838  026C  07A4               	addwf	panasonic@i_81,f
+  1839  026D  1803               	skipnc
+  1840  026E  0AA5               	incf	panasonic@i_81+1,f
+  1841  026F  3000               	movlw	0
+  1842  0270  07A5               	addwf	panasonic@i_81+1,f
+  1843  0271  0825               	movf	panasonic@i_81+1,w
+  1844  0272  3A80               	xorlw	128
+  1845  0273  00FF               	movwf	127
+  1846  0274  3080               	movlw	128
+  1847  0275  027F               	subwf	127,w
+  1848  0276  1D03               	skipz
+  1849  0277  2A7A               	goto	u1105
+  1850  0278  3008               	movlw	8
+  1851  0279  0224               	subwf	panasonic@i_81,w
+  1852  027A                     u1105:	
+  1853  027A  1C03               	skipc
+  1854  027B  2A4A               	goto	l1548
+  1855  027C                     l1566:	
+  1856                           
+  1857                           ;main.c: 265: }
+  1858                           ;main.c: 266: for (int i = 0;i<8;i++){
+  1859  027C  1283               	bcf	3,5	;RP0=0, select bank0
+  1860  027D  01A6               	clrf	panasonic@i_82
+  1861  027E  01A7               	clrf	panasonic@i_82+1
+  1862  027F  0827               	movf	panasonic@i_82+1,w
+  1863  0280  3A80               	xorlw	128
+  1864  0281  00FF               	movwf	127
+  1865  0282  3080               	movlw	128
+  1866  0283  027F               	subwf	127,w
+  1867  0284  1D03               	skipz
+  1868  0285  2A88               	goto	u1115
+  1869  0286  3008               	movlw	8
+  1870  0287  0226               	subwf	panasonic@i_82,w
+  1871  0288                     u1115:	
+  1872  0288  1803               	btfsc	3,0
+  1873  0289  2ABC               	goto	l1590
+  1874  028A                     l1572:	
+  1875                           
+  1876                           ;main.c: 267: cTemp = PanasonicTV4 & 0b00000001;
+  1877  028A  0874               	movf	panasonic@PanasonicTV4,w
+  1878  028B  3901               	andlw	1
+  1879  028C  00F8               	movwf	??_panasonic
+  1880  028D  0878               	movf	??_panasonic,w
+  1881  028E  00FC               	movwf	_cTemp
+  1882                           
+  1883                           ;main.c: 268: if (cTemp == 0) {
+  1884  028F  08FC               	movf	_cTemp,f
+  1885  0290  1D03               	skipz
+  1886  0291  2A9A               	goto	l1580
+  1887                           
+  1888                           ;main.c: 269: pingSony(20);
+  1889  0292  3014               	movlw	20
+  1890  0293  20FC               	fcall	_pingSony
+  1891                           
+  1892                           ;main.c: 270: _delay((unsigned long)((300)*(4000000/4000000.0)));
+  1893  0294  3063               	movlw	99
+  1894  0295  00F8               	movwf	??_panasonic
+  1895  0296                     u1607:	
+  1896  0296  0BF8               	decfsz	??_panasonic,f
+  1897  0297  2A96               	goto	u1607
+  1898  0298  2A99               	nop2	;nop
+  1899                           
+  1900                           ;main.c: 271: } else {
+  1901  0299  2AA3               	goto	l1584
+  1902  029A                     l1580:	
+  1903                           
+  1904                           ;main.c: 272: pingSony(20);
+  1905  029A  3014               	movlw	20
+  1906  029B  20FC               	fcall	_pingSony
+  1907                           
+  1908                           ;main.c: 273: _delay((unsigned long)((1150)*(4000000/4000000.0)));
+  1909  029C  30E5               	movlw	229
+  1910  029D  00F8               	movwf	??_panasonic
+  1911  029E                     u1617:	
+  1912  029E  2A9F               	nop2
+  1913  029F  0BF8               	decfsz	??_panasonic,f
+  1914  02A0  2A9E               	goto	u1617
+  1915  02A1  2AA2               	nop2	;nop
+  1916  02A2  2AA3               	nop2	;nop
+  1917  02A3                     l1584:	
+  1918                           
+  1919                           ;main.c: 274: }
+  1920                           ;main.c: 275: PanasonicTV4 = PanasonicTV4 >> 1;
+  1921  02A3  0874               	movf	panasonic@PanasonicTV4,w
+  1922  02A4  00F8               	movwf	??_panasonic
+  1923  02A5  1003               	clrc
+  1924  02A6  0C78               	rrf	??_panasonic,w
+  1925  02A7  00F9               	movwf	??_panasonic+1
+  1926  02A8  0879               	movf	??_panasonic+1,w
+  1927  02A9  00F4               	movwf	panasonic@PanasonicTV4
+  1928  02AA  3001               	movlw	1
+  1929  02AB  1283               	bcf	3,5	;RP0=0, select bank0
+  1930  02AC  07A6               	addwf	panasonic@i_82,f
+  1931  02AD  1803               	skipnc
+  1932  02AE  0AA7               	incf	panasonic@i_82+1,f
+  1933  02AF  3000               	movlw	0
+  1934  02B0  07A7               	addwf	panasonic@i_82+1,f
+  1935  02B1  0827               	movf	panasonic@i_82+1,w
+  1936  02B2  3A80               	xorlw	128
+  1937  02B3  00FF               	movwf	127
+  1938  02B4  3080               	movlw	128
+  1939  02B5  027F               	subwf	127,w
+  1940  02B6  1D03               	skipz
+  1941  02B7  2ABA               	goto	u1135
+  1942  02B8  3008               	movlw	8
+  1943  02B9  0226               	subwf	panasonic@i_82,w
+  1944  02BA                     u1135:	
+  1945  02BA  1C03               	skipc
+  1946  02BB  2A8A               	goto	l1572
+  1947  02BC                     l1590:	
+  1948                           
+  1949                           ;main.c: 276: }
+  1950                           ;main.c: 277: for (int i = 0;i<8;i++){
+  1951  02BC  1283               	bcf	3,5	;RP0=0, select bank0
+  1952  02BD  01A8               	clrf	panasonic@i_83
+  1953  02BE  01A9               	clrf	panasonic@i_83+1
+  1954  02BF  0829               	movf	panasonic@i_83+1,w
+  1955  02C0  3A80               	xorlw	128
+  1956  02C1  00FF               	movwf	127
+  1957  02C2  3080               	movlw	128
+  1958  02C3  027F               	subwf	127,w
+  1959  02C4  1D03               	skipz
+  1960  02C5  2AC8               	goto	u1145
+  1961  02C6  3008               	movlw	8
+  1962  02C7  0228               	subwf	panasonic@i_83,w
+  1963  02C8                     u1145:	
+  1964  02C8  1803               	btfsc	3,0
+  1965  02C9  2AFC               	goto	l1614
+  1966  02CA                     l1596:	
+  1967                           
+  1968                           ;main.c: 278: cTemp = PanasonicCommand & 0b00000001;
+  1969  02CA  0875               	movf	panasonic@PanasonicCommand,w
+  1970  02CB  3901               	andlw	1
+  1971  02CC  00F8               	movwf	??_panasonic
+  1972  02CD  0878               	movf	??_panasonic,w
+  1973  02CE  00FC               	movwf	_cTemp
+  1974                           
+  1975                           ;main.c: 279: if (cTemp == 0) {
+  1976  02CF  08FC               	movf	_cTemp,f
+  1977  02D0  1D03               	skipz
+  1978  02D1  2ADA               	goto	l1604
+  1979                           
+  1980                           ;main.c: 280: pingSony(20);
+  1981  02D2  3014               	movlw	20
+  1982  02D3  20FC               	fcall	_pingSony
+  1983                           
+  1984                           ;main.c: 281: _delay((unsigned long)((300)*(4000000/4000000.0)));
+  1985  02D4  3063               	movlw	99
+  1986  02D5  00F8               	movwf	??_panasonic
+  1987  02D6                     u1627:	
+  1988  02D6  0BF8               	decfsz	??_panasonic,f
+  1989  02D7  2AD6               	goto	u1627
+  1990  02D8  2AD9               	nop2	;nop
+  1991                           
+  1992                           ;main.c: 282: } else {
+  1993  02D9  2AE3               	goto	l1608
+  1994  02DA                     l1604:	
+  1995                           
+  1996                           ;main.c: 283: pingSony(20);
+  1997  02DA  3014               	movlw	20
+  1998  02DB  20FC               	fcall	_pingSony
+  1999                           
+  2000                           ;main.c: 284: _delay((unsigned long)((1150)*(4000000/4000000.0)));
+  2001  02DC  30E5               	movlw	229
+  2002  02DD  00F8               	movwf	??_panasonic
+  2003  02DE                     u1637:	
+  2004  02DE  2ADF               	nop2
+  2005  02DF  0BF8               	decfsz	??_panasonic,f
+  2006  02E0  2ADE               	goto	u1637
+  2007  02E1  2AE2               	nop2	;nop
+  2008  02E2  2AE3               	nop2	;nop
+  2009  02E3                     l1608:	
+  2010                           
+  2011                           ;main.c: 285: }
+  2012                           ;main.c: 286: PanasonicCommand = PanasonicCommand >> 1;
+  2013  02E3  0875               	movf	panasonic@PanasonicCommand,w
+  2014  02E4  00F8               	movwf	??_panasonic
+  2015  02E5  1003               	clrc
+  2016  02E6  0C78               	rrf	??_panasonic,w
+  2017  02E7  00F9               	movwf	??_panasonic+1
+  2018  02E8  0879               	movf	??_panasonic+1,w
+  2019  02E9  00F5               	movwf	panasonic@PanasonicCommand
+  2020  02EA  3001               	movlw	1
+  2021  02EB  1283               	bcf	3,5	;RP0=0, select bank0
+  2022  02EC  07A8               	addwf	panasonic@i_83,f
+  2023  02ED  1803               	skipnc
+  2024  02EE  0AA9               	incf	panasonic@i_83+1,f
+  2025  02EF  3000               	movlw	0
+  2026  02F0  07A9               	addwf	panasonic@i_83+1,f
+  2027  02F1  0829               	movf	panasonic@i_83+1,w
+  2028  02F2  3A80               	xorlw	128
+  2029  02F3  00FF               	movwf	127
+  2030  02F4  3080               	movlw	128
+  2031  02F5  027F               	subwf	127,w
+  2032  02F6  1D03               	skipz
+  2033  02F7  2AFA               	goto	u1165
+  2034  02F8  3008               	movlw	8
+  2035  02F9  0228               	subwf	panasonic@i_83,w
+  2036  02FA                     u1165:	
+  2037  02FA  1C03               	skipc
+  2038  02FB  2ACA               	goto	l1596
+  2039  02FC                     l1614:	
+  2040                           
+  2041                           ;main.c: 287: }
+  2042                           ;main.c: 288: for (int i = 0;i<8;i++){
+  2043  02FC  1283               	bcf	3,5	;RP0=0, select bank0
+  2044  02FD  01AA               	clrf	panasonic@i_84
+  2045  02FE  01AB               	clrf	panasonic@i_84+1
+  2046  02FF  082B               	movf	panasonic@i_84+1,w
+  2047  0300  3A80               	xorlw	128
+  2048  0301  00FF               	movwf	127
+  2049  0302  3080               	movlw	128
+  2050  0303  027F               	subwf	127,w
+  2051  0304  1D03               	skipz
+  2052  0305  2B08               	goto	u1175
+  2053  0306  3008               	movlw	8
+  2054  0307  022A               	subwf	panasonic@i_84,w
+  2055  0308                     u1175:	
+  2056  0308  1803               	btfsc	3,0
+  2057  0309  2B3C               	goto	l1638
+  2058  030A                     l1620:	
+  2059                           
+  2060                           ;main.c: 289: cTemp = PanasonicCommand2 & 0b00000001;
+  2061  030A  0876               	movf	panasonic@PanasonicCommand2,w
+  2062  030B  3901               	andlw	1
+  2063  030C  00F8               	movwf	??_panasonic
+  2064  030D  0878               	movf	??_panasonic,w
+  2065  030E  00FC               	movwf	_cTemp
+  2066                           
+  2067                           ;main.c: 290: if (cTemp == 0) {
+  2068  030F  08FC               	movf	_cTemp,f
+  2069  0310  1D03               	skipz
+  2070  0311  2B1A               	goto	l1628
+  2071                           
+  2072                           ;main.c: 291: pingSony(20);
+  2073  0312  3014               	movlw	20
+  2074  0313  20FC               	fcall	_pingSony
+  2075                           
+  2076                           ;main.c: 292: _delay((unsigned long)((300)*(4000000/4000000.0)));
+  2077  0314  3063               	movlw	99
+  2078  0315  00F8               	movwf	??_panasonic
+  2079  0316                     u1647:	
+  2080  0316  0BF8               	decfsz	??_panasonic,f
+  2081  0317  2B16               	goto	u1647
+  2082  0318  2B19               	nop2	;nop
+  2083                           
+  2084                           ;main.c: 293: } else {
+  2085  0319  2B23               	goto	l1632
+  2086  031A                     l1628:	
+  2087                           
+  2088                           ;main.c: 294: pingSony(20);
+  2089  031A  3014               	movlw	20
+  2090  031B  20FC               	fcall	_pingSony
+  2091                           
+  2092                           ;main.c: 295: _delay((unsigned long)((1150)*(4000000/4000000.0)));
+  2093  031C  30E5               	movlw	229
+  2094  031D  00F8               	movwf	??_panasonic
+  2095  031E                     u1657:	
+  2096  031E  2B1F               	nop2
+  2097  031F  0BF8               	decfsz	??_panasonic,f
+  2098  0320  2B1E               	goto	u1657
+  2099  0321  2B22               	nop2	;nop
+  2100  0322  2B23               	nop2	;nop
+  2101  0323                     l1632:	
+  2102                           
+  2103                           ;main.c: 296: }
+  2104                           ;main.c: 297: PanasonicCommand2 = PanasonicCommand2 >> 1;
+  2105  0323  0876               	movf	panasonic@PanasonicCommand2,w
+  2106  0324  00F8               	movwf	??_panasonic
+  2107  0325  1003               	clrc
+  2108  0326  0C78               	rrf	??_panasonic,w
+  2109  0327  00F9               	movwf	??_panasonic+1
+  2110  0328  0879               	movf	??_panasonic+1,w
+  2111  0329  00F6               	movwf	panasonic@PanasonicCommand2
+  2112  032A  3001               	movlw	1
+  2113  032B  1283               	bcf	3,5	;RP0=0, select bank0
+  2114  032C  07AA               	addwf	panasonic@i_84,f
+  2115  032D  1803               	skipnc
+  2116  032E  0AAB               	incf	panasonic@i_84+1,f
+  2117  032F  3000               	movlw	0
+  2118  0330  07AB               	addwf	panasonic@i_84+1,f
+  2119  0331  082B               	movf	panasonic@i_84+1,w
+  2120  0332  3A80               	xorlw	128
+  2121  0333  00FF               	movwf	127
+  2122  0334  3080               	movlw	128
+  2123  0335  027F               	subwf	127,w
+  2124  0336  1D03               	skipz
+  2125  0337  2B3A               	goto	u1195
+  2126  0338  3008               	movlw	8
+  2127  0339  022A               	subwf	panasonic@i_84,w
+  2128  033A                     u1195:	
+  2129  033A  1C03               	skipc
+  2130  033B  2B0A               	goto	l1620
+  2131  033C                     l1638:	
+  2132                           
+  2133                           ;main.c: 298: }
+  2134                           ;main.c: 299: for (int i = 0;i<1;i++){
+  2135  033C  1283               	bcf	3,5	;RP0=0, select bank0
+  2136  033D  01AC               	clrf	panasonic@i_85
+  2137  033E  01AD               	clrf	panasonic@i_85+1
+  2138  033F                     L2:	
+  2139  033F  082D               	movf	panasonic@i_85+1,w
+  2140  0340  3A80               	xorlw	128
+  2141  0341  00FF               	movwf	127
+  2142  0342  3080               	movlw	128
+  2143  0343  027F               	subwf	127,w
+  2144  0344  1D03               	skipz
+  2145  0345  2B48               	goto	u1205
+  2146  0346  3001               	movlw	1
+  2147  0347  022C               	subwf	panasonic@i_85,w
+  2148  0348                     u1205:	
+  2149  0348  1803               	btfsc	3,0
+  2150  0349  0008               	return
+  2151                           
+  2152                           ;main.c: 300: cTemp = PanasonicFinal & 0b00000001;
+  2153  034A  0877               	movf	panasonic@PanasonicFinal,w
+  2154  034B  3901               	andlw	1
+  2155  034C  00F8               	movwf	??_panasonic
+  2156  034D  0878               	movf	??_panasonic,w
+  2157  034E  00FC               	movwf	_cTemp
+  2158                           
+  2159                           ;main.c: 301: if (cTemp == 0) {
+  2160  034F  08FC               	movf	_cTemp,f
+  2161  0350  1D03               	skipz
+  2162  0351  2B5A               	goto	l1652
+  2163                           
+  2164                           ;main.c: 302: pingSony(20);
+  2165  0352  3014               	movlw	20
+  2166  0353  20FC               	fcall	_pingSony
+  2167                           
+  2168                           ;main.c: 303: _delay((unsigned long)((300)*(4000000/4000000.0)));
+  2169  0354  3063               	movlw	99
+  2170  0355  00F8               	movwf	??_panasonic
+  2171  0356                     u1667:	
+  2172  0356  0BF8               	decfsz	??_panasonic,f
+  2173  0357  2B56               	goto	u1667
+  2174  0358  2B59               	nop2	;nop
+  2175                           
+  2176                           ;main.c: 304: } else {
+  2177  0359  2B63               	goto	l1656
+  2178  035A                     l1652:	
+  2179                           
+  2180                           ;main.c: 305: pingSony(20);
+  2181  035A  3014               	movlw	20
+  2182  035B  20FC               	fcall	_pingSony
+  2183                           
+  2184                           ;main.c: 306: _delay((unsigned long)((1150)*(4000000/4000000.0)));
+  2185  035C  30E5               	movlw	229
+  2186  035D  00F8               	movwf	??_panasonic
+  2187  035E                     u1677:	
+  2188  035E  2B5F               	nop2
+  2189  035F  0BF8               	decfsz	??_panasonic,f
+  2190  0360  2B5E               	goto	u1677
+  2191  0361  2B62               	nop2	;nop
+  2192  0362  2B63               	nop2	;nop
+  2193  0363                     l1656:	
+  2194                           
+  2195                           ;main.c: 307: }
+  2196                           ;main.c: 308: PanasonicFinal = PanasonicFinal >> 1;
+  2197  0363  0877               	movf	panasonic@PanasonicFinal,w
+  2198  0364  00F8               	movwf	??_panasonic
+  2199  0365  1003               	clrc
+  2200  0366  0C78               	rrf	??_panasonic,w
+  2201  0367  00F9               	movwf	??_panasonic+1
+  2202  0368  0879               	movf	??_panasonic+1,w
+  2203  0369  00F7               	movwf	panasonic@PanasonicFinal
+  2204  036A  3001               	movlw	1
+  2205  036B  1283               	bcf	3,5	;RP0=0, select bank0
+  2206  036C  07AC               	addwf	panasonic@i_85,f
+  2207  036D  1803               	skipnc
+  2208  036E  0AAD               	incf	panasonic@i_85+1,f
+  2209  036F  3000               	movlw	0
+  2210  0370  07AD               	addwf	panasonic@i_85+1,f
+  2211  0371  2B3F               	goto	L2
+  2212  0372                     __end_of_panasonic:	
+  2213                           
+  2214                           	psect	text2
+  2215  00F0                     __ptext2:	
+  2216 ;; *************** function _initPorts *****************
+  2217 ;; Defined at:
+  2218 ;;		line 14 in file "user.c"
+  2219 ;; Parameters:    Size  Location     Type
+  2220 ;;		None
+  2221 ;; Auto vars:     Size  Location     Type
+  2222 ;;		None
+  2223 ;; Return value:  Size  Location     Type
+  2224 ;;		None               void
+  2225 ;; Registers used:
+  2226 ;;		wreg, status,2
+  2227 ;; Tracked objects:
+  2228 ;;		On entry : 0/0
+  2229 ;;		On exit  : 0/0
+  2230 ;;		Unchanged: 0/0
+  2231 ;; Data sizes:     COMMON   BANK0   BANK1
+  2232 ;;      Params:         0       0       0
+  2233 ;;      Locals:         0       0       0
+  2234 ;;      Temps:          0       0       0
+  2235 ;;      Totals:         0       0       0
+  2236 ;;Total ram usage:        0 bytes
+  2237 ;; Hardware stack levels used:    1
+  2238 ;; This function calls:
+  2239 ;;		Nothing
+  2240 ;; This function is called by:
+  2241 ;;		_main
+  2242 ;; This function uses a non-reentrant model
+  2243 ;;
+  2244                           
+  2245                           
+  2246                           ;psect for function _initPorts
+  2247  00F0                     _initPorts:	
+  2248                           
+  2249                           ;user.c: 20: CMCON0 = 7;
+  2250                           
+  2251                           ;incstack = 0
+  2252                           ; Regs used in _initPorts: [wreg+status,2]
+  2253  00F0  3007               	movlw	7
+  2254  00F1  1283               	bcf	3,5	;RP0=0, select bank0
+  2255  00F2  0099               	movwf	25	;volatile
+  2256                           
+  2257                           ;user.c: 21: ANSEL = 0b00000000;
+  2258  00F3  1683               	bsf	3,5	;RP0=1, select bank1
+  2259  00F4  019F               	clrf	31	;volatile
+  2260                           
+  2261                           ;user.c: 22: OPTION_REG = 0b00010111;
+  2262  00F5  3017               	movlw	23
+  2263  00F6  0081               	movwf	1	;volatile
+  2264                           
+  2265                           ;user.c: 26: TRISIO = 0b00011010;
+  2266  00F7  301A               	movlw	26
+  2267  00F8  0085               	movwf	5	;volatile
+  2268                           
+  2269                           ;user.c: 31: GPIO = 0;
+  2270  00F9  1283               	bcf	3,5	;RP0=0, select bank0
+  2271  00FA  0185               	clrf	5	;volatile
+  2272  00FB  0008               	return
+  2273  00FC                     __end_of_initPorts:	
+  2274                           
+  2275                           	psect	text3
+  2276  015A                     __ptext3:	
+  2277 ;; *************** function _derp *****************
+  2278 ;; Defined at:
+  2279 ;;		line 215 in file "main.c"
+  2280 ;; Parameters:    Size  Location     Type
+  2281 ;;  cAddress        1    wreg     unsigned char 
+  2282 ;;  cCommand        1    7[COMMON] unsigned char 
+  2283 ;;  c               1    8[COMMON] unsigned char 
+  2284 ;;  flip            1    9[COMMON] unsigned char 
+  2285 ;;  nDelay          2   10[COMMON] int 
+  2286 ;; Auto vars:     Size  Location     Type
+  2287 ;;  cAddress        1   14[BANK0 ] unsigned char 
+  2288 ;;  i               2   15[BANK0 ] int 
+  2289 ;; Return value:  Size  Location     Type
+  2290 ;;		None               void
+  2291 ;; Registers used:
+  2292 ;;		wreg, status,2, status,0, btemp+1, pclath, cstack
+  2293 ;; Tracked objects:
+  2294 ;;		On entry : 0/0
+  2295 ;;		On exit  : 0/0
+  2296 ;;		Unchanged: 0/0
+  2297 ;; Data sizes:     COMMON   BANK0   BANK1
+  2298 ;;      Params:         5       0       0
+  2299 ;;      Locals:         0       3       0
+  2300 ;;      Temps:          0       3       0
+  2301 ;;      Totals:         5       6       0
+  2302 ;;Total ram usage:       11 bytes
+  2303 ;; Hardware stack levels used:    1
+  2304 ;; Hardware stack levels required when called:    2
+  2305 ;; This function calls:
+  2306 ;;		_send
+  2307 ;; This function is called by:
+  2308 ;;		_main
+  2309 ;; This function uses a non-reentrant model
+  2310 ;;
+  2311                           
+  2312                           
+  2313                           ;psect for function _derp
+  2314  015A                     _derp:	
+  2315                           
+  2316                           ;incstack = 0
+  2317                           ; Regs used in _derp: [wreg+status,2+status,0+btemp+1+pclath+cstack]
+  2318                           ;derp@cAddress stored from wreg
+  2319  015A  1283               	bcf	3,5	;RP0=0, select bank0
+  2320  015B  00AE               	movwf	derp@cAddress
+  2321                           
+  2322                           ;main.c: 216: for (int i = 0; i < 5; i++) {
+  2323  015C  01AF               	clrf	derp@i
+  2324  015D  01B0               	clrf	derp@i+1
+  2325  015E                     L3:	
+  2326  015E  0830               	movf	derp@i+1,w
+  2327  015F  3A80               	xorlw	128
+  2328  0160  00FF               	movwf	127
+  2329  0161  3080               	movlw	128
+  2330  0162  027F               	subwf	127,w
+  2331  0163  1D03               	skipz
+  2332  0164  2967               	goto	u975
+  2333  0165  3005               	movlw	5
+  2334  0166  022F               	subwf	derp@i,w
+  2335  0167                     u975:	
+  2336  0167  1803               	btfsc	3,0
+  2337  0168  0008               	return
+  2338                           
+  2339                           ;main.c: 217: send(cAddress, cCommand, c, flip);
+  2340  0169  0877               	movf	derp@cCommand,w
+  2341  016A  1283               	bcf	3,5	;RP0=0, select bank0
+  2342  016B  00AB               	movwf	??_derp
+  2343  016C  082B               	movf	??_derp,w
+  2344  016D  00F2               	movwf	send@cCommand
+  2345  016E  0878               	movf	derp@c,w
+  2346  016F  00AC               	movwf	??_derp+1
+  2347  0170  082C               	movf	??_derp+1,w
+  2348  0171  00F3               	movwf	send@c
+  2349  0172  0879               	movf	derp@flip,w
+  2350  0173  00AD               	movwf	??_derp+2
+  2351  0174  082D               	movf	??_derp+2,w
+  2352  0175  00F4               	movwf	send@flip
+  2353  0176  082E               	movf	derp@cAddress,w
+  2354  0177  2372               	fcall	_send
+  2355                           
+  2356                           ;main.c: 218: if (nDelay == 25) {
+  2357  0178  3019               	movlw	25
+  2358  0179  067A               	xorwf	derp@nDelay,w
+  2359  017A  047B               	iorwf	derp@nDelay+1,w
+  2360  017B  1D03               	skipz
+  2361  017C  2988               	goto	l1480
+  2362                           
+  2363                           ;main.c: 219: _delay((unsigned long)((25)*(4000000/4000.0)));
+  2364  017D  3021               	movlw	33
+  2365  017E  1283               	bcf	3,5	;RP0=0, select bank0
+  2366  017F  00AC               	movwf	??_derp+1
+  2367  0180  3076               	movlw	118
+  2368  0181  00AB               	movwf	??_derp
+  2369  0182                     u1687:	
+  2370  0182  0BAB               	decfsz	??_derp,f
+  2371  0183  2982               	goto	u1687
+  2372  0184  0BAC               	decfsz	??_derp+1,f
+  2373  0185  2982               	goto	u1687
+  2374  0186  0000               	nop
+  2375                           
+  2376                           ;main.c: 220: } else if (nDelay == 114) {
+  2377  0187  29A7               	goto	l107
+  2378  0188                     l1480:	
+  2379  0188  3072               	movlw	114
+  2380  0189  067A               	xorwf	derp@nDelay,w
+  2381  018A  047B               	iorwf	derp@nDelay+1,w
+  2382  018B  1D03               	skipz
+  2383  018C  2998               	goto	l1484
+  2384                           
+  2385                           ;main.c: 221: _delay((unsigned long)((114)*(4000000/4000.0)));
+  2386  018D  3095               	movlw	149
+  2387  018E  1283               	bcf	3,5	;RP0=0, select bank0
+  2388  018F  00AC               	movwf	??_derp+1
+  2389  0190  300B               	movlw	11
+  2390  0191  00AB               	movwf	??_derp
+  2391  0192                     u1697:	
+  2392  0192  0BAB               	decfsz	??_derp,f
+  2393  0193  2992               	goto	u1697
+  2394  0194  0BAC               	decfsz	??_derp+1,f
+  2395  0195  2992               	goto	u1697
+  2396  0196  2997               	nop2
+  2397                           
+  2398                           ;main.c: 222: } else if (nDelay == 140) {
+  2399  0197  29A7               	goto	l107
+  2400  0198                     l1484:	
+  2401  0198  308C               	movlw	140
+  2402  0199  067A               	xorwf	derp@nDelay,w
+  2403  019A  047B               	iorwf	derp@nDelay+1,w
+  2404  019B  1D03               	skipz
+  2405  019C  29A7               	goto	l107
+  2406                           
+  2407                           ;main.c: 223: _delay((unsigned long)((140)*(4000000/4000.0)));
+  2408  019D  30B6               	movlw	182
+  2409  019E  1283               	bcf	3,5	;RP0=0, select bank0
+  2410  019F  00AC               	movwf	??_derp+1
+  2411  01A0  30D0               	movlw	208
+  2412  01A1  00AB               	movwf	??_derp
+  2413  01A2                     u1707:	
+  2414  01A2  0BAB               	decfsz	??_derp,f
+  2415  01A3  29A2               	goto	u1707
+  2416  01A4  0BAC               	decfsz	??_derp+1,f
+  2417  01A5  29A2               	goto	u1707
+  2418  01A6  0000               	nop
+  2419  01A7                     l107:	
+  2420  01A7  3001               	movlw	1
+  2421  01A8  1283               	bcf	3,5	;RP0=0, select bank0
+  2422  01A9  07AF               	addwf	derp@i,f
+  2423  01AA  1803               	skipnc
+  2424  01AB  0AB0               	incf	derp@i+1,f
+  2425  01AC  3000               	movlw	0
+  2426  01AD  07B0               	addwf	derp@i+1,f
+  2427  01AE  295E               	goto	L3
+  2428  01AF                     __end_of_derp:	
+  2429                           
+  2430                           	psect	text4
+  2431  0372                     __ptext4:	
+  2432 ;; *************** function _send *****************
+  2433 ;; Defined at:
+  2434 ;;		line 97 in file "main.c"
+  2435 ;; Parameters:    Size  Location     Type
+  2436 ;;  cAddress        1    wreg     unsigned char 
+  2437 ;;  cCommand        1    2[COMMON] unsigned char 
+  2438 ;;  c               1    3[COMMON] unsigned char 
+  2439 ;;  flip            1    4[COMMON] unsigned char 
+  2440 ;; Auto vars:     Size  Location     Type
+  2441 ;;  cAddress        1   10[BANK0 ] unsigned char 
+  2442 ;;  i               1    9[BANK0 ] unsigned char 
+  2443 ;;  i               1    8[BANK0 ] unsigned char 
+  2444 ;;  i               2    6[BANK0 ] int 
+  2445 ;;  i               2    4[BANK0 ] int 
+  2446 ;;  i               2    2[BANK0 ] int 
+  2447 ;;  i               2    0[BANK0 ] int 
+  2448 ;; Return value:  Size  Location     Type
+  2449 ;;		None               void
+  2450 ;; Registers used:
+  2451 ;;		wreg, status,2, status,0, btemp+1, pclath, cstack
+  2452 ;; Tracked objects:
+  2453 ;;		On entry : 0/0
+  2454 ;;		On exit  : 0/0
+  2455 ;;		Unchanged: 0/0
+  2456 ;; Data sizes:     COMMON   BANK0   BANK1
+  2457 ;;      Params:         3       0       0
+  2458 ;;      Locals:         0      11       0
+  2459 ;;      Temps:          2       0       0
+  2460 ;;      Totals:         5      11       0
+  2461 ;;Total ram usage:       16 bytes
+  2462 ;; Hardware stack levels used:    1
+  2463 ;; Hardware stack levels required when called:    1
+  2464 ;; This function calls:
+  2465 ;;		_pingNEC
+  2466 ;;		_pingRC5
+  2467 ;;		_pingSony
+  2468 ;; This function is called by:
+  2469 ;;		_derp
+  2470 ;; This function uses a non-reentrant model
+  2471 ;;
+  2472                           
+  2473                           
+  2474                           ;psect for function _send
+  2475  0372                     _send:	
+  2476                           
+  2477                           ;incstack = 0
+  2478                           ; Regs used in _send: [wreg+status,2+status,0+btemp+1+pclath+cstack]
+  2479                           ;send@cAddress stored from wreg
+  2480  0372  1283               	bcf	3,5	;RP0=0, select bank0
+  2481  0373  00AA               	movwf	send@cAddress
+  2482                           
+  2483                           ;main.c: 98: if (c == 1) {
+  2484  0374  0873               	movf	send@c,w
+  2485  0375  3A01               	xorlw	1
+  2486  0376  1D03               	skipz
+  2487  0377  2BC8               	goto	l1288
+  2488                           
+  2489                           ;main.c: 99: pingSony(91);
+  2490  0378  305B               	movlw	91
+  2491  0379  20FC               	fcall	_pingSony
+  2492                           
+  2493                           ;main.c: 100: _delay((unsigned long)((700)*(4000000/4000000.0)));
+  2494  037A  30E9               	movlw	233
+  2495  037B  00F5               	movwf	??_send
+  2496  037C                     u1717:	
+  2497  037C  0BF5               	decfsz	??_send,f
+  2498  037D  2B7C               	goto	u1717
+  2499                           
+  2500                           ;main.c: 101: i = 0;
+  2501  037E  1283               	bcf	3,5	;RP0=0, select bank0
+  2502  037F  01D7               	clrf	_i
+  2503                           
+  2504                           ;main.c: 102: j = 0;
+  2505  0380  01D8               	clrf	_j
+  2506  0381                     l1270:	
+  2507                           ;main.c: 103: while (i < 7) {
+  2508                           
+  2509  0381  3007               	movlw	7
+  2510  0382  0257               	subwf	_i,w
+  2511  0383  1803               	btfsc	3,0
+  2512  0384  2BC3               	goto	l1286
+  2513                           
+  2514                           ;main.c: 104: cTemp = cCommand & 0b00000001;
+  2515  0385  0872               	movf	send@cCommand,w
+  2516  0386  3901               	andlw	1
+  2517  0387  00F5               	movwf	??_send
+  2518  0388  0875               	movf	??_send,w
+  2519  0389  00FC               	movwf	_cTemp
+  2520                           
+  2521                           ;main.c: 105: if (cTemp == 1) {
+  2522  038A  087C               	movf	_cTemp,w
+  2523  038B  3A01               	xorlw	1
+  2524  038C  1D03               	skipz
+  2525  038D  2B90               	goto	l1262
+  2526                           
+  2527                           ;main.c: 106: pingSony(44);
+  2528  038E  302C               	movlw	44
+  2529  038F  2B91               	goto	L4
+  2530  0390                     l1262:	
+  2531                           ;main.c: 107: } else {
+  2532                           
+  2533                           
+  2534                           ;main.c: 108: pingSony(21);
+  2535  0390  3015               	movlw	21
+  2536  0391                     L4:	
+  2537  0391  20FC               	fcall	_pingSony
+  2538                           
+  2539                           ;main.c: 110: }
+  2540                           ;main.c: 111: cCommand = cCommand >> 1;
+  2541  0392  0872               	movf	send@cCommand,w
+  2542  0393  00F5               	movwf	??_send
+  2543  0394  1003               	clrc
+  2544  0395  0C75               	rrf	??_send,w
+  2545  0396  00F6               	movwf	??_send+1
+  2546  0397  0876               	movf	??_send+1,w
+  2547  0398  00F2               	movwf	send@cCommand
+  2548                           
+  2549                           ;main.c: 112: _delay((unsigned long)((680)*(4000000/4000000.0)));
+  2550  0399  30E2               	movlw	226
+  2551  039A  00F5               	movwf	??_send
+  2552  039B                     u1727:	
+  2553  039B  0BF5               	decfsz	??_send,f
+  2554  039C  2B9B               	goto	u1727
+  2555  039D  0000               	nop
+  2556                           
+  2557                           ;main.c: 113: i++;
+  2558  039E  3001               	movlw	1
+  2559  039F  00F5               	movwf	??_send
+  2560  03A0  0875               	movf	??_send,w
+  2561  03A1  1283               	bcf	3,5	;RP0=0, select bank0
+  2562  03A2  07D7               	addwf	_i,f
+  2563  03A3  2B81               	goto	l1270
+  2564  03A4                     l1272:	
+  2565                           ;main.c: 114: }
+  2566                           ;main.c: 115: while (j < 5) {
+  2567                           
+  2568                           
+  2569                           ;main.c: 116: cTemp = cAddress & 0b00000001;
+  2570  03A4  082A               	movf	send@cAddress,w
+  2571  03A5  3901               	andlw	1
+  2572  03A6  00F5               	movwf	??_send
+  2573  03A7  0875               	movf	??_send,w
+  2574  03A8  00FC               	movwf	_cTemp
+  2575                           
+  2576                           ;main.c: 117: if (cTemp == 1) {
+  2577  03A9  087C               	movf	_cTemp,w
+  2578  03AA  3A01               	xorlw	1
+  2579  03AB  1D03               	skipz
+  2580  03AC  2BAF               	goto	l1278
+  2581                           
+  2582                           ;main.c: 118: pingSony(44);
+  2583  03AD  302C               	movlw	44
+  2584  03AE  2BB0               	goto	L5
+  2585  03AF                     l1278:	
+  2586                           ;main.c: 120: } else {
+  2587                           
+  2588                           
+  2589                           ;main.c: 121: pingSony(21);
+  2590  03AF  3015               	movlw	21
+  2591  03B0                     L5:	
+  2592  03B0  20FC               	fcall	_pingSony
+  2593                           
+  2594                           ;main.c: 122: }
+  2595                           ;main.c: 123: cAddress = cAddress >> 1;
+  2596  03B1  1283               	bcf	3,5	;RP0=0, select bank0
+  2597  03B2  082A               	movf	send@cAddress,w
+  2598  03B3  00F5               	movwf	??_send
+  2599  03B4  1003               	clrc
+  2600  03B5  0C75               	rrf	??_send,w
+  2601  03B6  00F6               	movwf	??_send+1
+  2602  03B7  0876               	movf	??_send+1,w
+  2603  03B8  00AA               	movwf	send@cAddress
+  2604                           
+  2605                           ;main.c: 124: _delay((unsigned long)((680)*(4000000/4000000.0)));
+  2606  03B9  30E2               	movlw	226
+  2607  03BA  00F5               	movwf	??_send
+  2608  03BB                     u1737:	
+  2609  03BB  0BF5               	decfsz	??_send,f
+  2610  03BC  2BBB               	goto	u1737
+  2611  03BD  0000               	nop
+  2612                           
+  2613                           ;main.c: 125: j++;
+  2614  03BE  3001               	movlw	1
+  2615  03BF  00F5               	movwf	??_send
+  2616  03C0  0875               	movf	??_send,w
+  2617  03C1  1283               	bcf	3,5	;RP0=0, select bank0
+  2618  03C2  07D8               	addwf	_j,f
+  2619  03C3                     l1286:	
+  2620  03C3  3005               	movlw	5
+  2621  03C4  0258               	subwf	_j,w
+  2622  03C5  1803               	btfsc	3,0
+  2623  03C6  0008               	return
+  2624  03C7  2BA4               	goto	l1272
+  2625  03C8                     l1288:	
+  2626                           ;main.c: 126: }
+  2627                           ;main.c: 127: } else if (c == 2) {
+  2628                           
+  2629  03C8  0873               	movf	send@c,w
+  2630  03C9  3A02               	xorlw	2
+  2631  03CA  1D03               	skipz
+  2632  03CB  2CD9               	goto	l1392
+  2633                           
+  2634                           ;main.c: 128: pingNEC(290);
+  2635  03CC  3022               	movlw	34
+  2636  03CD  2119               	fcall	_pingNEC
+  2637                           
+  2638                           ;main.c: 129: _delay((unsigned long)((4599)*(4000000/4000000.0)));
+  2639  03CE  3006               	movlw	6
+  2640  03CF  00F6               	movwf	??_send+1
+  2641  03D0  30F8               	movlw	248
+  2642  03D1  00F5               	movwf	??_send
+  2643  03D2                     u1747:	
+  2644  03D2  0BF5               	decfsz	??_send,f
+  2645  03D3  2BD2               	goto	u1747
+  2646  03D4  0BF6               	decfsz	??_send+1,f
+  2647  03D5  2BD2               	goto	u1747
+  2648                           
+  2649                           ;main.c: 130: for (int i = 0; i < 8; i++) {
+  2650  03D6  1283               	bcf	3,5	;RP0=0, select bank0
+  2651  03D7  01A0               	clrf	send@i
+  2652  03D8  01A1               	clrf	send@i+1
+  2653  03D9  0821               	movf	send@i+1,w
+  2654  03DA  3A80               	xorlw	128
+  2655  03DB  00FF               	movwf	127
+  2656  03DC  3080               	movlw	128
+  2657  03DD  027F               	subwf	127,w
+  2658  03DE  1D03               	skipz
+  2659  03DF  2BE2               	goto	u775
+  2660  03E0  3008               	movlw	8
+  2661  03E1  0220               	subwf	send@i,w
+  2662  03E2                     u775:	
+  2663  03E2  1803               	btfsc	3,0
+  2664  03E3  2C17               	goto	l1318
+  2665  03E4                     l1300:	
+  2666                           
+  2667                           ;main.c: 131: cTemp = cAddress & 0b00000001;
+  2668  03E4  1283               	bcf	3,5	;RP0=0, select bank0
+  2669  03E5  082A               	movf	send@cAddress,w
+  2670  03E6  3901               	andlw	1
+  2671  03E7  00F5               	movwf	??_send
+  2672  03E8  0875               	movf	??_send,w
+  2673  03E9  00FC               	movwf	_cTemp
+  2674                           
+  2675                           ;main.c: 132: if (cTemp == 1) {
+  2676  03EA  087C               	movf	_cTemp,w
+  2677  03EB  3A01               	xorlw	1
+  2678  03EC  1D03               	skipz
+  2679  03ED  2BF7               	goto	l1308
+  2680                           
+  2681                           ;main.c: 133: pingNEC(16);
+  2682  03EE  3010               	movlw	16
+  2683  03EF  2119               	fcall	_pingNEC
+  2684                           
+  2685                           ;main.c: 134: _delay((unsigned long)((1688)*(4000000/4000000.0)));
+  2686  03F0  30F1               	movlw	241
+  2687  03F1  00F5               	movwf	??_send
+  2688  03F2                     u1757:	
+  2689  03F2  2BF3               	nop2
+  2690  03F3  2BF4               	nop2
+  2691  03F4  0BF5               	decfsz	??_send,f
+  2692  03F5  2BF2               	goto	u1757
+  2693                           
+  2694                           ;main.c: 135: } else {
+  2695  03F6  2BFE               	goto	l1312
+  2696  03F7                     l1308:	
+  2697                           
+  2698                           ;main.c: 136: pingNEC(16);
+  2699  03F7  3010               	movlw	16
+  2700  03F8  2119               	fcall	_pingNEC
+  2701                           
+  2702                           ;main.c: 137: _delay((unsigned long)((570)*(4000000/4000000.0)));
+  2703  03F9  30BD               	movlw	189
+  2704  03FA  00F5               	movwf	??_send
+  2705  03FB                     u1767:	
+  2706  03FB  0BF5               	decfsz	??_send,f
+  2707  03FC  2BFB               	goto	u1767
+  2708  03FD  2BFE               	nop2	;nop
+  2709  03FE                     l1312:	
+  2710                           
+  2711                           ;main.c: 138: }
+  2712                           ;main.c: 139: cAddress = cAddress >> 1;
+  2713  03FE  1283               	bcf	3,5	;RP0=0, select bank0
+  2714  03FF  082A               	movf	send@cAddress,w
+  2715  0400  00F5               	movwf	??_send
+  2716  0401  1003               	clrc
+  2717  0402  0C75               	rrf	??_send,w
+  2718  0403  00F6               	movwf	??_send+1
+  2719  0404  0876               	movf	??_send+1,w
+  2720  0405  00AA               	movwf	send@cAddress
+  2721  0406  3001               	movlw	1
+  2722  0407  07A0               	addwf	send@i,f
+  2723  0408  1803               	skipnc
+  2724  0409  0AA1               	incf	send@i+1,f
+  2725  040A  3000               	movlw	0
+  2726  040B  07A1               	addwf	send@i+1,f
+  2727  040C  0821               	movf	send@i+1,w
+  2728  040D  3A80               	xorlw	128
+  2729  040E  00FF               	movwf	127
+  2730  040F  3080               	movlw	128
+  2731  0410  027F               	subwf	127,w
+  2732  0411  1D03               	skipz
+  2733  0412  2C15               	goto	u795
+  2734  0413  3008               	movlw	8
+  2735  0414  0220               	subwf	send@i,w
+  2736  0415                     u795:	
+  2737  0415  1C03               	skipc
+  2738  0416  2BE4               	goto	l1300
+  2739  0417                     l1318:	
+  2740                           
+  2741                           ;main.c: 140: }
+  2742                           ;main.c: 141: for (int i = 0; i < 8; i++) {
+  2743  0417  1283               	bcf	3,5	;RP0=0, select bank0
+  2744  0418  01A2               	clrf	send@i_57
+  2745  0419  01A3               	clrf	send@i_57+1
+  2746  041A  0823               	movf	send@i_57+1,w
+  2747  041B  3A80               	xorlw	128
+  2748  041C  00FF               	movwf	127
+  2749  041D  3080               	movlw	128
+  2750  041E  027F               	subwf	127,w
+  2751  041F  1D03               	skipz
+  2752  0420  2C23               	goto	u805
+  2753  0421  3008               	movlw	8
+  2754  0422  0222               	subwf	send@i_57,w
+  2755  0423                     u805:	
+  2756  0423  1803               	btfsc	3,0
+  2757  0424  2C57               	goto	l1342
+  2758  0425                     l1324:	
+  2759                           
+  2760                           ;main.c: 142: cTemp = cAddress & 0b00000001;
+  2761  0425  1283               	bcf	3,5	;RP0=0, select bank0
+  2762  0426  082A               	movf	send@cAddress,w
+  2763  0427  3901               	andlw	1
+  2764  0428  00F5               	movwf	??_send
+  2765  0429  0875               	movf	??_send,w
+  2766  042A  00FC               	movwf	_cTemp
+  2767                           
+  2768                           ;main.c: 143: if (cTemp == 0) {
+  2769  042B  08FC               	movf	_cTemp,f
+  2770  042C  1D03               	skipz
+  2771  042D  2C37               	goto	l1332
+  2772                           
+  2773                           ;main.c: 144: pingNEC(16);
+  2774  042E  3010               	movlw	16
+  2775  042F  2119               	fcall	_pingNEC
+  2776                           
+  2777                           ;main.c: 145: _delay((unsigned long)((1688)*(4000000/4000000.0)));
+  2778  0430  30F1               	movlw	241
+  2779  0431  00F5               	movwf	??_send
+  2780  0432                     u1777:	
+  2781  0432  2C33               	nop2
+  2782  0433  2C34               	nop2
+  2783  0434  0BF5               	decfsz	??_send,f
+  2784  0435  2C32               	goto	u1777
+  2785                           
+  2786                           ;main.c: 146: } else {
+  2787  0436  2C3E               	goto	l1336
+  2788  0437                     l1332:	
+  2789                           
+  2790                           ;main.c: 147: pingNEC(16);
+  2791  0437  3010               	movlw	16
+  2792  0438  2119               	fcall	_pingNEC
+  2793                           
+  2794                           ;main.c: 148: _delay((unsigned long)((570)*(4000000/4000000.0)));
+  2795  0439  30BD               	movlw	189
+  2796  043A  00F5               	movwf	??_send
+  2797  043B                     u1787:	
+  2798  043B  0BF5               	decfsz	??_send,f
+  2799  043C  2C3B               	goto	u1787
+  2800  043D  2C3E               	nop2	;nop
+  2801  043E                     l1336:	
+  2802                           
+  2803                           ;main.c: 149: }
+  2804                           ;main.c: 150: cAddress = cAddress >> 1;
+  2805  043E  1283               	bcf	3,5	;RP0=0, select bank0
+  2806  043F  082A               	movf	send@cAddress,w
+  2807  0440  00F5               	movwf	??_send
+  2808  0441  1003               	clrc
+  2809  0442  0C75               	rrf	??_send,w
+  2810  0443  00F6               	movwf	??_send+1
+  2811  0444  0876               	movf	??_send+1,w
+  2812  0445  00AA               	movwf	send@cAddress
+  2813  0446  3001               	movlw	1
+  2814  0447  07A2               	addwf	send@i_57,f
+  2815  0448  1803               	skipnc
+  2816  0449  0AA3               	incf	send@i_57+1,f
+  2817  044A  3000               	movlw	0
+  2818  044B  07A3               	addwf	send@i_57+1,f
+  2819  044C  0823               	movf	send@i_57+1,w
+  2820  044D  3A80               	xorlw	128
+  2821  044E  00FF               	movwf	127
+  2822  044F  3080               	movlw	128
+  2823  0450  027F               	subwf	127,w
+  2824  0451  1D03               	skipz
+  2825  0452  2C55               	goto	u825
+  2826  0453  3008               	movlw	8
+  2827  0454  0222               	subwf	send@i_57,w
+  2828  0455                     u825:	
+  2829  0455  1C03               	skipc
+  2830  0456  2C25               	goto	l1324
+  2831  0457                     l1342:	
+  2832                           
+  2833                           ;main.c: 151: }
+  2834                           ;main.c: 152: for (int i = 0; i < 8; i++) {
+  2835  0457  1283               	bcf	3,5	;RP0=0, select bank0
+  2836  0458  01A4               	clrf	send@i_58
+  2837  0459  01A5               	clrf	send@i_58+1
+  2838  045A  0825               	movf	send@i_58+1,w
+  2839  045B  3A80               	xorlw	128
+  2840  045C  00FF               	movwf	127
+  2841  045D  3080               	movlw	128
+  2842  045E  027F               	subwf	127,w
+  2843  045F  1D03               	skipz
+  2844  0460  2C63               	goto	u835
+  2845  0461  3008               	movlw	8
+  2846  0462  0224               	subwf	send@i_58,w
+  2847  0463                     u835:	
+  2848  0463  1803               	btfsc	3,0
+  2849  0464  2C97               	goto	l1366
+  2850  0465                     l1348:	
+  2851                           
+  2852                           ;main.c: 153: cTemp = cCommand & 0b00000001;
+  2853  0465  0872               	movf	send@cCommand,w
+  2854  0466  3901               	andlw	1
+  2855  0467  00F5               	movwf	??_send
+  2856  0468  0875               	movf	??_send,w
+  2857  0469  00FC               	movwf	_cTemp
+  2858                           
+  2859                           ;main.c: 154: if (cTemp == 1) {
+  2860  046A  087C               	movf	_cTemp,w
+  2861  046B  3A01               	xorlw	1
+  2862  046C  1D03               	skipz
+  2863  046D  2C77               	goto	l1356
+  2864                           
+  2865                           ;main.c: 155: pingNEC(16);
+  2866  046E  3010               	movlw	16
+  2867  046F  2119               	fcall	_pingNEC
+  2868                           
+  2869                           ;main.c: 156: _delay((unsigned long)((1688)*(4000000/4000000.0)));
+  2870  0470  30F1               	movlw	241
+  2871  0471  00F5               	movwf	??_send
+  2872  0472                     u1797:	
+  2873  0472  2C73               	nop2
+  2874  0473  2C74               	nop2
+  2875  0474  0BF5               	decfsz	??_send,f
+  2876  0475  2C72               	goto	u1797
+  2877                           
+  2878                           ;main.c: 157: } else {
+  2879  0476  2C7E               	goto	l1360
+  2880  0477                     l1356:	
+  2881                           
+  2882                           ;main.c: 158: pingNEC(16);
+  2883  0477  3010               	movlw	16
+  2884  0478  2119               	fcall	_pingNEC
+  2885                           
+  2886                           ;main.c: 159: _delay((unsigned long)((570)*(4000000/4000000.0)));
+  2887  0479  30BD               	movlw	189
+  2888  047A  00F5               	movwf	??_send
+  2889  047B                     u1807:	
+  2890  047B  0BF5               	decfsz	??_send,f
+  2891  047C  2C7B               	goto	u1807
+  2892  047D  2C7E               	nop2	;nop
+  2893  047E                     l1360:	
+  2894                           
+  2895                           ;main.c: 160: }
+  2896                           ;main.c: 161: cCommand = cCommand >> 1;
+  2897  047E  0872               	movf	send@cCommand,w
+  2898  047F  00F5               	movwf	??_send
+  2899  0480  1003               	clrc
+  2900  0481  0C75               	rrf	??_send,w
+  2901  0482  00F6               	movwf	??_send+1
+  2902  0483  0876               	movf	??_send+1,w
+  2903  0484  00F2               	movwf	send@cCommand
+  2904  0485  3001               	movlw	1
+  2905  0486  1283               	bcf	3,5	;RP0=0, select bank0
+  2906  0487  07A4               	addwf	send@i_58,f
+  2907  0488  1803               	skipnc
+  2908  0489  0AA5               	incf	send@i_58+1,f
+  2909  048A  3000               	movlw	0
+  2910  048B  07A5               	addwf	send@i_58+1,f
+  2911  048C  0825               	movf	send@i_58+1,w
+  2912  048D  3A80               	xorlw	128
+  2913  048E  00FF               	movwf	127
+  2914  048F  3080               	movlw	128
+  2915  0490  027F               	subwf	127,w
+  2916  0491  1D03               	skipz
+  2917  0492  2C95               	goto	u855
+  2918  0493  3008               	movlw	8
+  2919  0494  0224               	subwf	send@i_58,w
+  2920  0495                     u855:	
+  2921  0495  1C03               	skipc
+  2922  0496  2C65               	goto	l1348
+  2923  0497                     l1366:	
+  2924                           
+  2925                           ;main.c: 162: }
+  2926                           ;main.c: 163: for (int i = 0; i < 8; i++) {
+  2927  0497  1283               	bcf	3,5	;RP0=0, select bank0
+  2928  0498  01A6               	clrf	send@i_59
+  2929  0499  01A7               	clrf	send@i_59+1
+  2930  049A  0827               	movf	send@i_59+1,w
+  2931  049B  3A80               	xorlw	128
+  2932  049C  00FF               	movwf	127
+  2933  049D  3080               	movlw	128
+  2934  049E  027F               	subwf	127,w
+  2935  049F  1D03               	skipz
+  2936  04A0  2CA3               	goto	u865
+  2937  04A1  3008               	movlw	8
+  2938  04A2  0226               	subwf	send@i_59,w
+  2939  04A3                     u865:	
+  2940  04A3  1803               	btfsc	3,0
+  2941  04A4  2CD6               	goto	l1390
+  2942  04A5                     l1372:	
+  2943                           
+  2944                           ;main.c: 164: cTemp = cCommand & 0b00000001;
+  2945  04A5  0872               	movf	send@cCommand,w
+  2946  04A6  3901               	andlw	1
+  2947  04A7  00F5               	movwf	??_send
+  2948  04A8  0875               	movf	??_send,w
+  2949  04A9  00FC               	movwf	_cTemp
+  2950                           
+  2951                           ;main.c: 165: if (cTemp == 0) {
+  2952  04AA  08FC               	movf	_cTemp,f
+  2953  04AB  1D03               	skipz
+  2954  04AC  2CB6               	goto	l1380
+  2955                           
+  2956                           ;main.c: 166: pingNEC(16);
+  2957  04AD  3010               	movlw	16
+  2958  04AE  2119               	fcall	_pingNEC
+  2959                           
+  2960                           ;main.c: 167: _delay((unsigned long)((1688)*(4000000/4000000.0)));
+  2961  04AF  30F1               	movlw	241
+  2962  04B0  00F5               	movwf	??_send
+  2963  04B1                     u1817:	
+  2964  04B1  2CB2               	nop2
+  2965  04B2  2CB3               	nop2
+  2966  04B3  0BF5               	decfsz	??_send,f
+  2967  04B4  2CB1               	goto	u1817
+  2968                           
+  2969                           ;main.c: 168: } else {
+  2970  04B5  2CBD               	goto	l1384
+  2971  04B6                     l1380:	
+  2972                           
+  2973                           ;main.c: 169: pingNEC(16);
+  2974  04B6  3010               	movlw	16
+  2975  04B7  2119               	fcall	_pingNEC
+  2976                           
+  2977                           ;main.c: 170: _delay((unsigned long)((570)*(4000000/4000000.0)));
+  2978  04B8  30BD               	movlw	189
+  2979  04B9  00F5               	movwf	??_send
+  2980  04BA                     u1827:	
+  2981  04BA  0BF5               	decfsz	??_send,f
+  2982  04BB  2CBA               	goto	u1827
+  2983  04BC  2CBD               	nop2	;nop
+  2984  04BD                     l1384:	
+  2985                           
+  2986                           ;main.c: 171: }
+  2987                           ;main.c: 172: cCommand = cCommand >> 1;
+  2988  04BD  0872               	movf	send@cCommand,w
+  2989  04BE  00F5               	movwf	??_send
+  2990  04BF  1003               	clrc
+  2991  04C0  0C75               	rrf	??_send,w
+  2992  04C1  00F6               	movwf	??_send+1
+  2993  04C2  0876               	movf	??_send+1,w
+  2994  04C3  00F2               	movwf	send@cCommand
+  2995  04C4  3001               	movlw	1
+  2996  04C5  1283               	bcf	3,5	;RP0=0, select bank0
+  2997  04C6  07A6               	addwf	send@i_59,f
+  2998  04C7  1803               	skipnc
+  2999  04C8  0AA7               	incf	send@i_59+1,f
+  3000  04C9  3000               	movlw	0
+  3001  04CA  07A7               	addwf	send@i_59+1,f
+  3002  04CB  0827               	movf	send@i_59+1,w
+  3003  04CC  3A80               	xorlw	128
+  3004  04CD  00FF               	movwf	127
+  3005  04CE  3080               	movlw	128
+  3006  04CF  027F               	subwf	127,w
+  3007  04D0  1D03               	skipz
+  3008  04D1  2CD4               	goto	u885
+  3009  04D2  3008               	movlw	8
+  3010  04D3  0226               	subwf	send@i_59,w
+  3011  04D4                     u885:	
+  3012  04D4  1C03               	skipc
+  3013  04D5  2CA5               	goto	l1372
+  3014  04D6                     l1390:	
+  3015                           
+  3016                           ;main.c: 173: }
+  3017                           ;main.c: 174: pingNEC(16);
+  3018  04D6  3010               	movlw	16
+  3019  04D7  2119               	fcall	_pingNEC
+  3020                           
+  3021                           ;main.c: 175: } else {
+  3022  04D8  0008               	return
+  3023  04D9                     l1392:	
+  3024                           
+  3025                           ;main.c: 176: pingRC5(28);
+  3026  04D9  301C               	movlw	28
+  3027  04DA  2138               	fcall	_pingRC5
+  3028                           
+  3029                           ;main.c: 177: _delay((unsigned long)((950)*(4000000/4000000.0)));
+  3030  04DB  30ED               	movlw	237
+  3031  04DC  00F5               	movwf	??_send
+  3032  04DD                     u1837:	
+  3033  04DD  0000               	nop
+  3034  04DE  0BF5               	decfsz	??_send,f
+  3035  04DF  2CDD               	goto	u1837
+  3036  04E0  0000               	nop
+  3037                           
+  3038                           ;main.c: 178: pingRC5(28);
+  3039  04E1  301C               	movlw	28
+  3040  04E2  2138               	fcall	_pingRC5
+  3041                           
+  3042                           ;main.c: 179: _delay((unsigned long)((950)*(4000000/4000000.0)));
+  3043  04E3  30ED               	movlw	237
+  3044  04E4  00F5               	movwf	??_send
+  3045  04E5                     u1847:	
+  3046  04E5  0000               	nop
+  3047  04E6  0BF5               	decfsz	??_send,f
+  3048  04E7  2CE5               	goto	u1847
+  3049  04E8  0000               	nop
+  3050                           
+  3051                           ;main.c: 180: if (flip == 0) {
+  3052  04E9  08F4               	movf	send@flip,f
+  3053  04EA  1D03               	skipz
+  3054  04EB  2CF4               	goto	l1404
+  3055                           
+  3056                           ;main.c: 181: pingRC5(28);
+  3057  04EC  301C               	movlw	28
+  3058  04ED  2138               	fcall	_pingRC5
+  3059                           
+  3060                           ;main.c: 182: _delay((unsigned long)((950)*(4000000/4000000.0)));
+  3061  04EE  30ED               	movlw	237
+  3062  04EF  00F5               	movwf	??_send
+  3063  04F0                     u1857:	
+  3064  04F0  0000               	nop
+  3065  04F1  0BF5               	decfsz	??_send,f
+  3066  04F2  2CF0               	goto	u1857
+  3067  04F3  0000               	nop
+  3068  04F4                     l1404:	
+  3069                           
+  3070                           ;main.c: 183: }
+  3071                           ;main.c: 184: if (flip == 1) {
+  3072  04F4  0874               	movf	send@flip,w
+  3073  04F5  3A01               	xorlw	1
+  3074  04F6  1D03               	skipz
+  3075  04F7  2D00               	goto	l1410
+  3076                           
+  3077                           ;main.c: 185: _delay((unsigned long)((950)*(4000000/4000000.0)));
+  3078  04F8  30ED               	movlw	237
+  3079  04F9  00F5               	movwf	??_send
+  3080  04FA                     u1867:	
+  3081  04FA  0000               	nop
+  3082  04FB  0BF5               	decfsz	??_send,f
+  3083  04FC  2CFA               	goto	u1867
+  3084  04FD  0000               	nop
+  3085                           
+  3086                           ;main.c: 186: pingRC5(28);
+  3087  04FE  301C               	movlw	28
+  3088  04FF  2138               	fcall	_pingRC5
+  3089  0500                     l1410:	
+  3090                           
+  3091                           ;main.c: 187: }
+  3092                           ;main.c: 188: for (unsigned char i = 0; i < 5; i++) {
+  3093  0500  1283               	bcf	3,5	;RP0=0, select bank0
+  3094  0501  01A8               	clrf	send@i_61
+  3095  0502  3005               	movlw	5
+  3096  0503  0228               	subwf	send@i_61,w
+  3097  0504  1803               	btfsc	3,0
+  3098  0505  2D30               	goto	l1434
+  3099  0506                     l1416:	
+  3100                           
+  3101                           ;main.c: 189: cTemp = cAddress & 0b00000001;
+  3102  0506  082A               	movf	send@cAddress,w
+  3103  0507  3901               	andlw	1
+  3104  0508  00F5               	movwf	??_send
+  3105  0509  0875               	movf	??_send,w
+  3106  050A  00FC               	movwf	_cTemp
+  3107                           
+  3108                           ;main.c: 190: if (cTemp == 1) {
+  3109  050B  087C               	movf	_cTemp,w
+  3110  050C  3A01               	xorlw	1
+  3111  050D  1D03               	skipz
+  3112  050E  2D18               	goto	l1424
+  3113                           
+  3114                           ;main.c: 191: pingRC5(28);
+  3115  050F  301C               	movlw	28
+  3116  0510  2138               	fcall	_pingRC5
+  3117                           
+  3118                           ;main.c: 192: _delay((unsigned long)((950)*(4000000/4000000.0)));
+  3119  0511  30ED               	movlw	237
+  3120  0512  00F5               	movwf	??_send
+  3121  0513                     u1877:	
+  3122  0513  0000               	nop
+  3123  0514  0BF5               	decfsz	??_send,f
+  3124  0515  2D13               	goto	u1877
+  3125  0516  0000               	nop
+  3126                           
+  3127                           ;main.c: 193: } else {
+  3128  0517  2D20               	goto	l1428
+  3129  0518                     l1424:	
+  3130                           
+  3131                           ;main.c: 194: _delay((unsigned long)((950)*(4000000/4000000.0)));
+  3132  0518  30ED               	movlw	237
+  3133  0519  00F5               	movwf	??_send
+  3134  051A                     u1887:	
+  3135  051A  0000               	nop
+  3136  051B  0BF5               	decfsz	??_send,f
+  3137  051C  2D1A               	goto	u1887
+  3138  051D  0000               	nop
+  3139                           
+  3140                           ;main.c: 195: pingRC5(28);
+  3141  051E  301C               	movlw	28
+  3142  051F  2138               	fcall	_pingRC5
+  3143  0520                     l1428:	
+  3144                           
+  3145                           ;main.c: 196: }
+  3146                           ;main.c: 197: cAddress = cAddress >> 1;
+  3147  0520  1283               	bcf	3,5	;RP0=0, select bank0
+  3148  0521  082A               	movf	send@cAddress,w
+  3149  0522  00F5               	movwf	??_send
+  3150  0523  1003               	clrc
+  3151  0524  0C75               	rrf	??_send,w
+  3152  0525  00F6               	movwf	??_send+1
+  3153  0526  0876               	movf	??_send+1,w
+  3154  0527  00AA               	movwf	send@cAddress
+  3155  0528  3001               	movlw	1
+  3156  0529  00F5               	movwf	??_send
+  3157  052A  0875               	movf	??_send,w
+  3158  052B  07A8               	addwf	send@i_61,f
+  3159  052C  3005               	movlw	5
+  3160  052D  0228               	subwf	send@i_61,w
+  3161  052E  1C03               	skipc
+  3162  052F  2D06               	goto	l1416
+  3163  0530                     l1434:	
+  3164                           
+  3165                           ;main.c: 198: }
+  3166                           ;main.c: 199: for (unsigned char i = 0; i < 6; i++) {
+  3167  0530  01A9               	clrf	send@i_62
+  3168  0531                     L6:	
+  3169  0531  3006               	movlw	6
+  3170  0532  0229               	subwf	send@i_62,w
+  3171  0533  1803               	btfsc	3,0
+  3172  0534  0008               	return
+  3173                           
+  3174                           ;main.c: 200: cTemp = cCommand & 0b00000001;
+  3175  0535  0872               	movf	send@cCommand,w
+  3176  0536  3901               	andlw	1
+  3177  0537  00F5               	movwf	??_send
+  3178  0538  0875               	movf	??_send,w
+  3179  0539  00FC               	movwf	_cTemp
+  3180                           
+  3181                           ;main.c: 201: if (cTemp == 1) {
+  3182  053A  087C               	movf	_cTemp,w
+  3183  053B  3A01               	xorlw	1
+  3184  053C  1D03               	skipz
+  3185  053D  2D47               	goto	l1448
+  3186                           
+  3187                           ;main.c: 202: pingRC5(28);
+  3188  053E  301C               	movlw	28
+  3189  053F  2138               	fcall	_pingRC5
+  3190                           
+  3191                           ;main.c: 203: _delay((unsigned long)((950)*(4000000/4000000.0)));
+  3192  0540  30ED               	movlw	237
+  3193  0541  00F5               	movwf	??_send
+  3194  0542                     u1897:	
+  3195  0542  0000               	nop
+  3196  0543  0BF5               	decfsz	??_send,f
+  3197  0544  2D42               	goto	u1897
+  3198  0545  0000               	nop
+  3199                           
+  3200                           ;main.c: 204: } else {
+  3201  0546  2D4F               	goto	l1452
+  3202  0547                     l1448:	
+  3203                           
+  3204                           ;main.c: 205: _delay((unsigned long)((950)*(4000000/4000000.0)));
+  3205  0547  30ED               	movlw	237
+  3206  0548  00F5               	movwf	??_send
+  3207  0549                     u1907:	
+  3208  0549  0000               	nop
+  3209  054A  0BF5               	decfsz	??_send,f
+  3210  054B  2D49               	goto	u1907
+  3211  054C  0000               	nop
+  3212                           
+  3213                           ;main.c: 206: pingRC5(28);
+  3214  054D  301C               	movlw	28
+  3215  054E  2138               	fcall	_pingRC5
+  3216  054F                     l1452:	
+  3217                           
+  3218                           ;main.c: 207: }
+  3219                           ;main.c: 208: cCommand = cCommand >> 1;
+  3220  054F  0872               	movf	send@cCommand,w
+  3221  0550  00F5               	movwf	??_send
+  3222  0551  1003               	clrc
+  3223  0552  0C75               	rrf	??_send,w
+  3224  0553  00F6               	movwf	??_send+1
+  3225  0554  0876               	movf	??_send+1,w
+  3226  0555  00F2               	movwf	send@cCommand
+  3227  0556  3001               	movlw	1
+  3228  0557  00F5               	movwf	??_send
+  3229  0558  0875               	movf	??_send,w
+  3230  0559  1283               	bcf	3,5	;RP0=0, select bank0
+  3231  055A  07A9               	addwf	send@i_62,f
+  3232  055B  2D31               	goto	L6
+  3233  055C                     __end_of_send:	
+  3234                           
+  3235                           	psect	text5
+  3236  00FC                     __ptext5:	
+  3237 ;; *************** function _pingSony *****************
+  3238 ;; Defined at:
+  3239 ;;		line 21 in file "main.c"
+  3240 ;; Parameters:    Size  Location     Type
+  3241 ;;  cPulses         1    wreg     unsigned char 
+  3242 ;; Auto vars:     Size  Location     Type
+  3243 ;;  cPulses         1    1[COMMON] unsigned char 
+  3244 ;; Return value:  Size  Location     Type
+  3245 ;;		None               void
+  3246 ;; Registers used:
+  3247 ;;		wreg, status,2, status,0
+  3248 ;; Tracked objects:
+  3249 ;;		On entry : 0/0
+  3250 ;;		On exit  : 0/0
+  3251 ;;		Unchanged: 0/0
+  3252 ;; Data sizes:     COMMON   BANK0   BANK1
+  3253 ;;      Params:         0       0       0
+  3254 ;;      Locals:         1       0       0
+  3255 ;;      Temps:          1       0       0
+  3256 ;;      Totals:         2       0       0
+  3257 ;;Total ram usage:        2 bytes
+  3258 ;; Hardware stack levels used:    1
+  3259 ;; This function calls:
+  3260 ;;		Nothing
+  3261 ;; This function is called by:
+  3262 ;;		_send
+  3263 ;;		_panasonic
+  3264 ;; This function uses a non-reentrant model
+  3265 ;;
+  3266                           
+  3267                           
+  3268                           ;psect for function _pingSony
+  3269  00FC                     _pingSony:	
+  3270                           
+  3271                           ;incstack = 0
+  3272                           ; Regs used in _pingSony: [wreg+status,2+status,0]
+  3273                           ;pingSony@cPulses stored from wreg
+  3274  00FC  00F1               	movwf	pingSony@cPulses
+  3275                           
+  3276                           ;main.c: 22: for (counter = cPulses; counter != 0; counter--) {
+  3277  00FD  0871               	movf	pingSony@cPulses,w
+  3278  00FE  00F0               	movwf	??_pingSony
+  3279  00FF  0870               	movf	??_pingSony,w
+  3280  0100  00FD               	movwf	_counter
+  3281  0101                     l1232:	
+  3282  0101  08FD               	movf	_counter,f
+  3283  0102  1903               	btfsc	3,2
+  3284  0103  0008               	return
+  3285                           
+  3286                           ;main.c: 23: GP0 = 1;
+  3287  0104  1283               	bcf	3,5	;RP0=0, select bank0
+  3288  0105  1405               	bsf	5,0	;volatile
+  3289                           
+  3290                           ;main.c: 24: GP5 = 1;
+  3291  0106  1685               	bsf	5,5	;volatile
+  3292  0107  0000               	nop	;# 
+  3293  0108  0000               	nop	;# 
+  3294  0109  0000               	nop	;# 
+  3295  010A  0000               	nop	;# 
+  3296  010B  0000               	nop	;# 
+  3297                           
+  3298                           ;main.c: 30: GP0 = 0;
+  3299  010C  1283               	bcf	3,5	;RP0=0, select bank0
+  3300  010D  1005               	bcf	5,0	;volatile
+  3301                           
+  3302                           ;main.c: 31: GP5 = 0;
+  3303  010E  1285               	bcf	5,5	;volatile
+  3304  010F  0000               	nop	;# 
+  3305  0110  0000               	nop	;# 
+  3306  0111  0000               	nop	;# 
+  3307  0112  0000               	nop	;# 
+  3308  0113  0000               	nop	;# 
+  3309  0114  0000               	nop	;# 
+  3310  0115  0000               	nop	;# 
+  3311  0116  3001               	movlw	1
+  3312  0117  02FD               	subwf	_counter,f
+  3313  0118  2901               	goto	l1232
+  3314  0119                     __end_of_pingSony:	
+  3315                           
+  3316                           	psect	text6
+  3317  0138                     __ptext6:	
+  3318 ;; *************** function _pingRC5 *****************
+  3319 ;; Defined at:
+  3320 ;;		line 69 in file "main.c"
+  3321 ;; Parameters:    Size  Location     Type
+  3322 ;;  cPulses         1    wreg     unsigned char 
+  3323 ;; Auto vars:     Size  Location     Type
+  3324 ;;  cPulses         1    1[COMMON] unsigned char 
+  3325 ;; Return value:  Size  Location     Type
+  3326 ;;		None               void
+  3327 ;; Registers used:
+  3328 ;;		wreg, status,2, status,0
+  3329 ;; Tracked objects:
+  3330 ;;		On entry : 0/0
+  3331 ;;		On exit  : 0/0
+  3332 ;;		Unchanged: 0/0
+  3333 ;; Data sizes:     COMMON   BANK0   BANK1
+  3334 ;;      Params:         0       0       0
+  3335 ;;      Locals:         1       0       0
+  3336 ;;      Temps:          1       0       0
+  3337 ;;      Totals:         2       0       0
+  3338 ;;Total ram usage:        2 bytes
+  3339 ;; Hardware stack levels used:    1
+  3340 ;; This function calls:
+  3341 ;;		Nothing
+  3342 ;; This function is called by:
+  3343 ;;		_send
+  3344 ;; This function uses a non-reentrant model
+  3345 ;;
+  3346                           
+  3347                           
+  3348                           ;psect for function _pingRC5
+  3349  0138                     _pingRC5:	
+  3350                           
+  3351                           ;incstack = 0
+  3352                           ; Regs used in _pingRC5: [wreg+status,2+status,0]
+  3353                           ;pingRC5@cPulses stored from wreg
+  3354  0138  00F1               	movwf	pingRC5@cPulses
+  3355                           
+  3356                           ;main.c: 70: for (counter = cPulses; counter != 0; counter--) {
+  3357  0139  0871               	movf	pingRC5@cPulses,w
+  3358  013A  00F0               	movwf	??_pingRC5
+  3359  013B  0870               	movf	??_pingRC5,w
+  3360  013C  00FD               	movwf	_counter
+  3361  013D                     l1244:	
+  3362  013D  08FD               	movf	_counter,f
+  3363  013E  1903               	btfsc	3,2
+  3364  013F  0008               	return
+  3365                           
+  3366                           ;main.c: 71: GP0 = 1;
+  3367  0140  1283               	bcf	3,5	;RP0=0, select bank0
+  3368  0141  1405               	bsf	5,0	;volatile
+  3369                           
+  3370                           ;main.c: 72: GP5 = 1;
+  3371  0142  1685               	bsf	5,5	;volatile
+  3372  0143  0000               	nop	;# 
+  3373  0144  0000               	nop	;# 
+  3374  0145  0000               	nop	;# 
+  3375  0146  0000               	nop	;# 
+  3376  0147  0000               	nop	;# 
+  3377  0148  0000               	nop	;# 
+  3378  0149  0000               	nop	;# 
+  3379                           
+  3380                           ;main.c: 80: GP0 = 0;
+  3381  014A  1283               	bcf	3,5	;RP0=0, select bank0
+  3382  014B  1005               	bcf	5,0	;volatile
+  3383                           
+  3384                           ;main.c: 81: GP5 = 0;
+  3385  014C  1285               	bcf	5,5	;volatile
+  3386  014D  0000               	nop	;# 
+  3387  014E  0000               	nop	;# 
+  3388  014F  0000               	nop	;# 
+  3389  0150  0000               	nop	;# 
+  3390  0151  0000               	nop	;# 
+  3391  0152  0000               	nop	;# 
+  3392  0153  0000               	nop	;# 
+  3393  0154  0000               	nop	;# 
+  3394  0155  0000               	nop	;# 
+  3395  0156  0000               	nop	;# 
+  3396  0157  3001               	movlw	1
+  3397  0158  02FD               	subwf	_counter,f
+  3398  0159  293D               	goto	l1244
+  3399  015A                     __end_of_pingRC5:	
+  3400                           
+  3401                           	psect	text7
+  3402  0119                     __ptext7:	
+  3403 ;; *************** function _pingNEC *****************
+  3404 ;; Defined at:
+  3405 ;;		line 44 in file "main.c"
+  3406 ;; Parameters:    Size  Location     Type
+  3407 ;;  cPulses         1    wreg     unsigned char 
+  3408 ;; Auto vars:     Size  Location     Type
+  3409 ;;  cPulses         1    1[COMMON] unsigned char 
+  3410 ;; Return value:  Size  Location     Type
+  3411 ;;		None               void
+  3412 ;; Registers used:
+  3413 ;;		wreg, status,2, status,0
+  3414 ;; Tracked objects:
+  3415 ;;		On entry : 0/0
+  3416 ;;		On exit  : 0/0
+  3417 ;;		Unchanged: 0/0
+  3418 ;; Data sizes:     COMMON   BANK0   BANK1
+  3419 ;;      Params:         0       0       0
+  3420 ;;      Locals:         1       0       0
+  3421 ;;      Temps:          1       0       0
+  3422 ;;      Totals:         2       0       0
+  3423 ;;Total ram usage:        2 bytes
+  3424 ;; Hardware stack levels used:    1
+  3425 ;; This function calls:
+  3426 ;;		Nothing
+  3427 ;; This function is called by:
+  3428 ;;		_send
+  3429 ;; This function uses a non-reentrant model
+  3430 ;;
+  3431                           
+  3432                           
+  3433                           ;psect for function _pingNEC
+  3434  0119                     _pingNEC:	
+  3435                           
+  3436                           ;incstack = 0
+  3437                           ; Regs used in _pingNEC: [wreg+status,2+status,0]
+  3438                           ;pingNEC@cPulses stored from wreg
+  3439  0119  00F1               	movwf	pingNEC@cPulses
+  3440                           
+  3441                           ;main.c: 45: for (counter = cPulses; counter != 0; counter--) {
+  3442  011A  0871               	movf	pingNEC@cPulses,w
+  3443  011B  00F0               	movwf	??_pingNEC
+  3444  011C  0870               	movf	??_pingNEC,w
+  3445  011D  00FD               	movwf	_counter
+  3446  011E                     l1238:	
+  3447  011E  08FD               	movf	_counter,f
+  3448  011F  1903               	btfsc	3,2
+  3449  0120  0008               	return
+  3450                           
+  3451                           ;main.c: 46: GP0 = 1;
+  3452  0121  1283               	bcf	3,5	;RP0=0, select bank0
+  3453  0122  1405               	bsf	5,0	;volatile
+  3454                           
+  3455                           ;main.c: 47: GP5 = 1;
+  3456  0123  1685               	bsf	5,5	;volatile
+  3457  0124  0000               	nop	;# 
+  3458  0125  0000               	nop	;# 
+  3459  0126  0000               	nop	;# 
+  3460  0127  0000               	nop	;# 
+  3461  0128  0000               	nop	;# 
+  3462  0129  0000               	nop	;# 
+  3463                           
+  3464                           ;main.c: 54: GP0 = 0;
+  3465  012A  1283               	bcf	3,5	;RP0=0, select bank0
+  3466  012B  1005               	bcf	5,0	;volatile
+  3467                           
+  3468                           ;main.c: 55: GP5 = 0;
+  3469  012C  1285               	bcf	5,5	;volatile
+  3470  012D  0000               	nop	;# 
+  3471  012E  0000               	nop	;# 
+  3472  012F  0000               	nop	;# 
+  3473  0130  0000               	nop	;# 
+  3474  0131  0000               	nop	;# 
+  3475  0132  0000               	nop	;# 
+  3476  0133  0000               	nop	;# 
+  3477  0134  0000               	nop	;# 
+  3478  0135  3001               	movlw	1
+  3479  0136  02FD               	subwf	_counter,f
+  3480  0137  291E               	goto	l1238
+  3481  0138                     __end_of_pingNEC:	
+  3482  007E                     btemp	set	126	;btemp
+  3483  007E                     wtemp	set	126
+  3484  007E                     wtemp0	set	126
+  3485  0080                     wtemp1	set	128
+  3486  0082                     wtemp2	set	130
+  3487  0084                     wtemp3	set	132
+  3488  0086                     wtemp4	set	134
+  3489  0088                     wtemp5	set	136
+  3490  007F                     wtemp6	set	127
+  3491  007E                     ttemp	set	126
+  3492  007E                     ttemp0	set	126
+  3493  0081                     ttemp1	set	129
+  3494  0084                     ttemp2	set	132
+  3495  0087                     ttemp3	set	135
+  3496  007F                     ttemp4	set	127
+  3497  007E                     ltemp	set	126
+  3498  007E                     ltemp0	set	126
+  3499  0082                     ltemp1	set	130
+  3500  0086                     ltemp2	set	134
+  3501  0080                     ltemp3	set	128
+
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        0
+    BSS         4
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMMON           14     12      14
+    BANK0            80     55      57
+    BANK1            32      0       0
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMMON
+
+    _main->_derp
+    _panasonic->_pingSony
+    _derp->_send
+    _send->_pingNEC
+    _send->_pingRC5
+    _send->_pingSony
+
+Critical Paths under _main in BANK0
+
+    _main->_derp
+    _derp->_send
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                38    38      0    7300
+                                             17 BANK0     38    38      0
+                               _derp
+                          _initPorts
+                          _panasonic
+ ---------------------------------------------------------------------------------
+ (1) _panasonic                                           23    17      6    1613
+                                              2 COMMON     8     2      6
+                                              0 BANK0     15    15      0
+                           _pingSony
+ ---------------------------------------------------------------------------------
+ (1) _initPorts                                            0     0      0       0
+ ---------------------------------------------------------------------------------
+ (1) _derp                                                11     6      5    4329
+                                              7 COMMON     5     0      5
+                                             11 BANK0      6     6      0
+                               _send
+ ---------------------------------------------------------------------------------
+ (2) _send                                                16    13      3     949
+                                              2 COMMON     5     2      3
+                                              0 BANK0     11    11      0
+                            _pingNEC
+                            _pingRC5
+                           _pingSony
+ ---------------------------------------------------------------------------------
+ (2) _pingSony                                             2     2      0      22
+                                              0 COMMON     2     2      0
+ ---------------------------------------------------------------------------------
+ (3) _pingRC5                                              2     2      0      22
+                                              0 COMMON     2     2      0
+ ---------------------------------------------------------------------------------
+ (3) _pingNEC                                              2     2      0      22
+                                              0 COMMON     2     2      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 3
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _derp
+     _send
+       _pingNEC
+       _pingRC5
+       _pingSony
+   _initPorts
+   _panasonic
+     _pingSony
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BITCOMMON            E      0       0       0        0.0%
+EEDATA             100      0       0       0        0.0%
+NULL                 0      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+COMMON               E      C       E       1      100.0%
+BITSFR0              0      0       0       1        0.0%
+SFR0                 0      0       0       1        0.0%
+BITSFR1              0      0       0       2        0.0%
+SFR1                 0      0       0       2        0.0%
+STACK                0      0       0       2        0.0%
+BITBANK0            50      0       0       3        0.0%
+BANK0               50     37      39       4       71.3%
+BANK1               20      0       0       5        0.0%
+ABS                  0      0      47       6        0.0%
+BITBANK1            20      0       0       7        0.0%
+DATA                 0      0      47       8        0.0%
+
+
+Microchip Technology PIC Macro Assembler V1.33 build 59893 
+Symbol Table                                                                                   Fri May 08 15:17:09 2015
+
+                         _i 0057                           _j 0058                 __CFG_CP$OFF 0000  
+            pingRC5@cPulses 0071                 main@SharpTV 0053              pingNEC@cPulses 0071  
+               main@SharpUp 0041                         l107 01A7                         _GP0 0028  
+                       _GP1 0029                         _GP2 002A                         _GP3 002B  
+                       _GP4 002C                         _GP5 002D                __CFG_CPD$OFF 0000  
+                       u805 0423                         u825 0455                         u835 0463  
+                       u855 0495                         u775 03E2                         u865 04A3  
+                       u795 0415                         u885 04D4                         u975 0167  
+                      l1300 03E4                        l1232 0101                        l1312 03FE  
+                      l1410 0500                        l1244 013D                        l1404 04F4  
+                      l1332 0437                        l1324 0425                        l1308 03F7  
+                      l1500 01C9                        l1238 011E                        l1342 0457  
+                      l1318 0417                        l1262 0390                        l1270 0381  
+                      l1424 0518                        l1416 0506                        l1360 047E  
+                      l1336 043E                        l1272 03A4                        l1512 01E3  
+                      l1434 0530                        l1452 054F                        l1428 0520  
+                      l1380 04B6                        l1372 04A5                        l1356 0477  
+                      l1348 0465                        l1620 030A                        l1604 02DA  
+                      l1532 021A                        l1524 020A                        l1508 01DA  
+                      l1390 04D6                        l1366 0497                        l1278 03AF  
+                      l1286 03C3                        l1614 02FC                        l1542 023C  
+                      l1518 01FC                        l1448 0547                        l1384 04BD  
+                      l1392 04D9                        l1288 03C8                        l1480 0188  
+                      l1632 0323                        l1608 02E3                        l1560 0263  
+                      l1536 0223                        l1802 0745                        l1484 0198  
+                      l1652 035A                        l1628 031A                        l1580 029A  
+                      l1572 028A                        l1556 025A                        l1548 024A  
+                      l1820 07EC                        l1638 033C                        l1590 02BC  
+                      l1566 027C                        l1656 0363                        l1584 02A3  
+                      l1728 05D1                        l1826 07F5                        l1770 068E  
+                      l1762 0687                        l1738 05D7                        l1596 02CA  
+                      l1756 067E                        l1766 068B                        l1794 073E  
+                      l1788 0735                        l1798 0742                        u1105 027A  
+                      u1025 01C7                        u1115 0288                        u1205 0348  
+                      u1045 01FA                        u1135 02BA                        u1055 0208  
+                      u1145 02C8                        u1075 023A                        u1165 02FA  
+                      u1085 0248                        u1175 0308                        u1407 0679  
+                      u1417 06A0                        u1195 033A                        u1507 07B3  
+                      u1427 06BD                        u1517 07CD                        u1437 06D7  
+                      u1357 05E9                        u1607 0296                        u1527 07E7  
+                      u1447 06FC                        u1367 0606                        u1617 029E  
+                      u1537 01B5                        u1457 0716                        u1377 0620  
+                      _GPIO 0005                        u1707 01A2                        u1627 02D6  
+                      u1547 01D6                        u1467 0730                        u1387 0645  
+                      u1717 037C                        u1637 02DE                        u1557 01DE  
+                      u1477 0757                        u1397 065F                        u1807 047B  
+                      u1727 039B                        u1647 0316                        u1567 0216  
+                      u1487 0774                        u1817 04B1                        u1737 03BB  
+                      u1657 031E                        u1577 021E                        u1497 078E  
+                      u1907 0549                        u1827 04BA                        u1747 03D2  
+                      u1667 0356                        u1587 0256                        u1837 04DD  
+                      u1757 03F2                        u1677 035E                        u1597 025E  
+                      u1847 04E5                        u1767 03FB                        u1687 0182  
+                      u1857 04F0                        u1777 0432                        u1697 0192  
+                      u1867 04FA                        u1787 043B                        u1877 0513  
+                      u1797 0472                        u1887 051A                        u1897 0542  
+              main@SonyDown 0039                        _derp 015A                        _main 055C  
+                      _send 0372                        btemp 007E                        ltemp 007E  
+                      start 0000                        ttemp 007E                        wtemp 007E  
+             __CFG_IESO$OFF 0000               main@SharpDown 0042               main@RelisysTV 004D  
+             main@RelisysUp 003C                       ?_derp 0077                       ?_main 0070  
+                     ?_send 0072               __CFG_WDTE$OFF 0000                       _ANSEL 009F  
+             __CFG_PWRTE$ON 0000              __CFG_FCMEN$OFF 0000                       _cTemp 007C  
+             main@SonyPower 003A               main@ToshibaTV 0054                       derp@c 0078  
+                     derp@i 002F               main@ToshibaUp 0045             __end_of_pingRC5 015A  
+           __end_of_pingNEC 0138              __CFG_BOREN$OFF 0000                       send@c 0073  
+                     send@i 0020                       ltemp0 007E                       ltemp1 0082  
+                     ltemp2 0086                       ltemp3 0080                       ttemp0 007E  
+                     ttemp1 0081                       ttemp2 0084                       ttemp3 0087  
+                     ttemp4 007F                       status 0003                       wtemp0 007E  
+                     wtemp1 0080                       wtemp2 0082                       wtemp3 0084  
+                     wtemp4 0086                       wtemp5 0088                       wtemp6 007F  
+            __CFG_MCLRE$OFF 0000             __initialization 07FA                __end_of_derp 01AF  
+              __end_of_main 07FA                __end_of_send 055C                      ??_derp 002B  
+            main@SharpPower 0043                      ??_main 0031                      ??_send 0075  
+ panasonic@PanasonicCommand 0075                      _CMCON0 0019                      _TRISIO 0085  
+          __end_of_pingSony 0119       panasonic@PanasonicTV2 0072       panasonic@PanasonicTV3 0073  
+     panasonic@PanasonicTV4 0074                   ??_pingRC5 0070                   ??_pingNEC 0070  
+           main@PanasonicTV 004E             main@PanasonicUp 0037     __end_of__initialization 07FE  
+            __pcstackCOMMON 0070             main@RelisysDown 003D                  __pbssBANK0 0057  
+        __size_of_initPorts 000C          __size_of_panasonic 01C3                  __pmaintext 055C  
+                 ?_pingSony 0070                     __ptext0 0000                     __ptext1 01AF  
+                   __ptext2 00F0                     __ptext3 015A                     __ptext4 0372  
+                   __ptext5 00FC                     __ptext6 0138                     __ptext7 0119  
+                   _counter 007D           __end_of_initPorts 00FC                     _pingRC5 0138  
+                   _pingNEC 0119             main@ToshibaDown 0046           __end_of_panasonic 0372  
+                derp@nDelay 007A        end_of_initialization 07FE             pingSony@cPulses 0071  
+          main@PanasonicTV2 004F            main@PanasonicTV3 0050            main@PanasonicTV4 0051  
+                ??_pingSony 0070            main@PanasonicUp2 0038                  main@SonyTV 004C  
+                main@SonyUp 003B         start_initialization 07FA                send@cAddress 002A  
+              send@cCommand 0072        panasonic@PanasonicTV 002E                  panasonic@i 0020  
+          main@RelisysPower 003E                 __pbssCOMMON 007C                   ___latbits 0000  
+             __pcstackBANK0 0020           __size_of_pingSony 001D                    ?_pingRC5 0070  
+                  ?_pingNEC 0070         main@PanasonicPower2 0040                   _initPorts 00F0  
+                 _panasonic 01AF                derp@cAddress 002E                derp@cCommand 0077  
+                 main@RC5TV 0055                   main@RC5Up 0049                   main@cflip 0056  
+                ?_initPorts 0070                  ?_panasonic 0072            __size_of_pingRC5 0022  
+          __size_of_pingNEC 001F          main@PanasonicFinal 0052          main@PanasonicDown2 004B  
+        main@PanasonicPower 003F               __size_of_derp 0055               __size_of_main 029E  
+             __size_of_send 01EA                    _pingSony 00FC                    derp@flip 0079  
+          main@ToshibaPower 0044     panasonic@PanasonicFinal 0077                 ??_initPorts 0070  
+               ??_panasonic 0078                    send@i_61 0028                    send@i_62 0029  
+                  send@i_57 0022                    send@i_58 0024                    send@i_59 0026  
+                  send@flip 0074           main@PanasonicDown 004A  panasonic@PanasonicCommand2 0076  
+                _OPTION_REG 0081                main@RC5Power 0048          __CFG_FOSC$INTOSCIO 0000  
+             panasonic@i_80 0022               panasonic@i_81 0024                 main@RC5Down 0047  
+             panasonic@i_82 0026               panasonic@i_83 0028               panasonic@i_84 002A  
+             panasonic@i_85 002C  

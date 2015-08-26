@@ -1,0 +1,336 @@
+[p LITE_MODE AUTOSTATIC PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 12F683 ]
+[d frameptr 6 ]
+"4 C:\Program Files\Microchip\xc8\v1.33\sources\common\abdiv.c
+[v ___abdiv __abdiv `(c  1 e 1 0 ]
+"4 C:\Program Files\Microchip\xc8\v1.33\sources\common\abmod.c
+[v ___abmod __abmod `(c  1 e 1 0 ]
+"33 C:\Program Files\Microchip\xc8\v1.33\sources\common\abtoft.c
+[v ___abtoft __abtoft `(f  1 e 3 0 ]
+"6 C:\Program Files\Microchip\xc8\v1.33\sources\common\aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
+"5 C:\Program Files\Microchip\xc8\v1.33\sources\common\almod.c
+[v ___almod __almod `(l  1 e 4 0 ]
+"42 C:\Program Files\Microchip\xc8\v1.33\sources\common\altoft.c
+[v ___altoft __altoft `(f  1 e 3 0 ]
+"6 C:\Program Files\Microchip\xc8\v1.33\sources\common\atdiv.c
+[v ___atdiv __atdiv `(m  1 e 3 0 ]
+"6 C:\Program Files\Microchip\xc8\v1.33\sources\common\atmod.c
+[v ___atmod __atmod `(m  1 e 3 0 ]
+"37 C:\Program Files\Microchip\xc8\v1.33\sources\common\attoft.c
+[v ___attoft __attoft `(f  1 e 3 0 ]
+"6 C:\Program Files\Microchip\xc8\v1.33\sources\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"6 C:\Program Files\Microchip\xc8\v1.33\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"32 C:\Program Files\Microchip\xc8\v1.33\sources\common\awtoft.c
+[v ___awtoft __awtoft `(f  1 e 3 0 ]
+"62 C:\Program Files\Microchip\xc8\v1.33\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files\Microchip\xc8\v1.33\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"4 C:\Program Files\Microchip\xc8\v1.33\sources\common\ftge.c
+[v ___ftge __ftge `(b  1 e 0 0 ]
+"62 C:\Program Files\Microchip\xc8\v1.33\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+"15 C:\Program Files\Microchip\xc8\v1.33\sources\common\ftneg.c
+[v ___ftneg __ftneg `(f  1 e 3 0 ]
+"18 C:\Program Files\Microchip\xc8\v1.33\sources\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+"44 C:\Program Files\Microchip\xc8\v1.33\sources\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v1.33\sources\common\lbdiv.c
+[v ___lbdiv __lbdiv `(uc  1 e 1 0 ]
+"4 C:\Program Files\Microchip\xc8\v1.33\sources\common\lbmod.c
+[v ___lbmod __lbmod `(uc  1 e 1 0 ]
+"27 C:\Program Files\Microchip\xc8\v1.33\sources\common\lbtoft.c
+[v ___lbtoft __lbtoft `(f  1 e 3 0 ]
+"6 C:\Program Files\Microchip\xc8\v1.33\sources\common\lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"6 C:\Program Files\Microchip\xc8\v1.33\sources\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+"35 C:\Program Files\Microchip\xc8\v1.33\sources\common\lltoft.c
+[v ___lltoft __lltoft `(f  1 e 3 0 ]
+"6 C:\Program Files\Microchip\xc8\v1.33\sources\common\ltdiv.c
+[v ___ltdiv __ltdiv `(um  1 e 3 0 ]
+"6 C:\Program Files\Microchip\xc8\v1.33\sources\common\ltmod.c
+[v ___ltmod __ltmod `(um  1 e 3 0 ]
+"30 C:\Program Files\Microchip\xc8\v1.33\sources\common\lttoft.c
+[v ___lttoft __lttoft `(f  1 e 3 0 ]
+"6 C:\Program Files\Microchip\xc8\v1.33\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"6 C:\Program Files\Microchip\xc8\v1.33\sources\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"28 C:\Program Files\Microchip\xc8\v1.33\sources\common\lwtoft.c
+[v ___lwtoft __lwtoft `(f  1 e 3 0 ]
+"15 C:\Program Files\Microchip\xc8\v1.33\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"15 C:\Program Files\Microchip\xc8\v1.33\sources\common\Umul24.c
+[v ___tmul __tmul `(um  1 e 3 0 ]
+"15 C:\Program Files\Microchip\xc8\v1.33\sources\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v1.33\sources\common\Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+"6 C:\Program Files\Microchip\xc8\v1.33\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 0 0 ]
+"24
+[v _memcpyee memcpyee `(v  1 e 0 0 ]
+"48
+[v ___eetoc __eetoc `(uc  1 e 1 0 ]
+"56
+[v ___eetoi __eetoi `(ui  1 e 2 0 ]
+"64
+[v ___eetom __eetom `(um  1 e 3 0 ]
+"72
+[v ___eetol __eetol `(ul  1 e 4 0 ]
+"80
+[v ___ctoee __ctoee `(uc  1 e 1 0 ]
+"87
+[v ___itoee __itoee `(ui  1 e 2 0 ]
+"94
+[v ___mtoee __mtoee `(um  1 e 3 0 ]
+"101
+[v ___ltoee __ltoee `(ul  1 e 4 0 ]
+"108
+[v ___eetoft __eetoft `(f  1 e 3 0 ]
+"116
+[v ___eetofl __eetofl `(d  1 e 3 0 ]
+"124
+[v ___fttoee __fttoee `(f  1 e 3 0 ]
+"131
+[v ___fltoee __fltoee `(d  1 e 3 0 ]
+"49 C:\Program Files\Microchip\xc8\v1.33\sources\pic\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+"21 H:\MPLABProjects\Remote_Test_Final_3-PANASONIC-CODES\main.c
+[v _pingSony pingSony `(v  1 e 0 0 ]
+"44
+[v _pingNEC pingNEC `(v  1 e 0 0 ]
+"69
+[v _pingRC5 pingRC5 `(v  1 e 0 0 ]
+"97
+[v _send send `(v  1 e 0 0 ]
+"215
+[v _derp derp `(v  1 e 0 0 ]
+"230
+[v _panasonic panasonic `(v  1 e 0 0 ]
+"314
+[v _main main `(i  1 e 2 0 ]
+"14 H:\MPLABProjects\Remote_Test_Final_3-PANASONIC-CODES\system.c
+[v _initOsc initOsc `(v  1 e 0 0 ]
+"14 H:\MPLABProjects\Remote_Test_Final_3-PANASONIC-CODES\user.c
+[v _initPorts initPorts `(v  1 e 0 0 ]
+"158 C:\Program Files\Microchip\xc8\v1.33\include\pic12f683.h
+[v _GPIO GPIO `VEuc  1 e 1 @5 ]
+"676
+[v _CMCON0 CMCON0 `VEuc  1 e 1 @25 ]
+"854
+[v _OPTION_REG OPTION_REG `VEuc  1 e 1 @129 ]
+"923
+[v _TRISIO TRISIO `VEuc  1 e 1 @133 ]
+"1591
+[v _EEDATA EEDATA `VEuc  1 e 1 @154 ]
+"1623
+[v _EEADR EEADR `VEuc  1 e 1 @155 ]
+"1629
+[v _EECON1 EECON1 `VEuc  1 e 1 @156 ]
+"1666
+[v _EECON2 EECON2 `VEuc  1 e 1 @157 ]
+"1678
+[v _ANSEL ANSEL `VEuc  1 e 1 @159 ]
+"1775
+[v _CARRY CARRY `VEb  1 e 0 @24 ]
+"1823
+[v _GIE GIE `VEb  1 e 0 @95 ]
+"1831
+[v _GP0 GP0 `VEb  1 e 0 @40 ]
+"1833
+[v _GP1 GP1 `VEb  1 e 0 @41 ]
+"1835
+[v _GP2 GP2 `VEb  1 e 0 @42 ]
+"1837
+[v _GP3 GP3 `VEb  1 e 0 @43 ]
+"1839
+[v _GP4 GP4 `VEb  1 e 0 @44 ]
+"1841
+[v _GP5 GP5 `VEb  1 e 0 @45 ]
+"1905
+[v _RD RD `VEb  1 e 0 @1248 ]
+"2043
+[v _WR WR `VEb  1 e 0 @1249 ]
+"2045
+[v _WREN WREN `VEb  1 e 0 @1250 ]
+"14 H:\MPLABProjects\Remote_Test_Final_3-PANASONIC-CODES\main.c
+[v _counter counter `uc  1 e 1 0 ]
+"15
+[v _cTemp cTemp `uc  1 e 1 0 ]
+"16
+[v _i i `uc  1 e 1 0 ]
+[v _j j `uc  1 e 1 0 ]
+"314
+[v _main main `(i  1 e 2 0 ]
+{
+"355
+[v main@cflip cflip `uc  1 a 1 54 ]
+"354
+[v main@RC5TV RC5TV `uc  1 a 1 53 ]
+"346
+[v main@ToshibaTV ToshibaTV `uc  1 a 1 52 ]
+"341
+[v main@SharpTV SharpTV `uc  1 a 1 51 ]
+"339
+[v main@PanasonicFinal PanasonicFinal `uc  1 a 1 50 ]
+"332
+[v main@PanasonicTV4 PanasonicTV4 `uc  1 a 1 49 ]
+"331
+[v main@PanasonicTV3 PanasonicTV3 `uc  1 a 1 48 ]
+"330
+[v main@PanasonicTV2 PanasonicTV2 `uc  1 a 1 47 ]
+"329
+[v main@PanasonicTV PanasonicTV `uc  1 a 1 46 ]
+"324
+[v main@RelisysTV RelisysTV `uc  1 a 1 45 ]
+"320
+[v main@SonyTV SonyTV `uc  1 a 1 44 ]
+"336
+[v main@PanasonicDown2 PanasonicDown2 `uc  1 a 1 43 ]
+"335
+[v main@PanasonicDown PanasonicDown `uc  1 a 1 42 ]
+"353
+[v main@RC5Up RC5Up `uc  1 a 1 41 ]
+"352
+[v main@RC5Power RC5Power `uc  1 a 1 40 ]
+"351
+[v main@RC5Down RC5Down `uc  1 a 1 39 ]
+"349
+[v main@ToshibaDown ToshibaDown `uc  1 a 1 38 ]
+"348
+[v main@ToshibaUp ToshibaUp `uc  1 a 1 37 ]
+"347
+[v main@ToshibaPower ToshibaPower `uc  1 a 1 36 ]
+"344
+[v main@SharpPower SharpPower `uc  1 a 1 35 ]
+"343
+[v main@SharpDown SharpDown `uc  1 a 1 34 ]
+"342
+[v main@SharpUp SharpUp `uc  1 a 1 33 ]
+"338
+[v main@PanasonicPower2 PanasonicPower2 `uc  1 a 1 32 ]
+"337
+[v main@PanasonicPower PanasonicPower `uc  1 a 1 31 ]
+"327
+[v main@RelisysPower RelisysPower `uc  1 a 1 30 ]
+"326
+[v main@RelisysDown RelisysDown `uc  1 a 1 29 ]
+"325
+[v main@RelisysUp RelisysUp `uc  1 a 1 28 ]
+"322
+[v main@SonyUp SonyUp `uc  1 a 1 27 ]
+"321
+[v main@SonyPower SonyPower `uc  1 a 1 26 ]
+"319
+[v main@SonyDown SonyDown `uc  1 a 1 25 ]
+"334
+[v main@PanasonicUp2 PanasonicUp2 `uc  1 a 1 24 ]
+"333
+[v main@PanasonicUp PanasonicUp `uc  1 a 1 23 ]
+"429
+} 0
+"230
+[v _panasonic panasonic `(v  1 e 0 0 ]
+{
+[v panasonic@PanasonicTV PanasonicTV `uc  1 a 1 wreg ]
+"299
+[v panasonic@i_85 i `i  1 a 2 12 ]
+"288
+[v panasonic@i_84 i `i  1 a 2 10 ]
+"277
+[v panasonic@i_83 i `i  1 a 2 8 ]
+"266
+[v panasonic@i_82 i `i  1 a 2 6 ]
+"255
+[v panasonic@i_81 i `i  1 a 2 4 ]
+"244
+[v panasonic@i_80 i `i  1 a 2 2 ]
+"233
+[v panasonic@i i `i  1 a 2 0 ]
+"230
+[v panasonic@PanasonicTV PanasonicTV `uc  1 a 1 wreg ]
+[v panasonic@PanasonicTV2 PanasonicTV2 `uc  1 p 1 2 ]
+[v panasonic@PanasonicTV3 PanasonicTV3 `uc  1 p 1 3 ]
+[v panasonic@PanasonicTV4 PanasonicTV4 `uc  1 p 1 4 ]
+[v panasonic@PanasonicCommand PanasonicCommand `uc  1 p 1 5 ]
+[v panasonic@PanasonicCommand2 PanasonicCommand2 `uc  1 p 1 6 ]
+[v panasonic@PanasonicFinal PanasonicFinal `uc  1 p 1 7 ]
+[v panasonic@PanasonicTV PanasonicTV `uc  1 a 1 14 ]
+"310
+} 0
+"14 H:\MPLABProjects\Remote_Test_Final_3-PANASONIC-CODES\user.c
+[v _initPorts initPorts `(v  1 e 0 0 ]
+{
+"33
+} 0
+"215 H:\MPLABProjects\Remote_Test_Final_3-PANASONIC-CODES\main.c
+[v _derp derp `(v  1 e 0 0 ]
+{
+[v derp@cAddress cAddress `uc  1 a 1 wreg ]
+"216
+[v derp@i i `i  1 a 2 15 ]
+"215
+[v derp@cAddress cAddress `uc  1 a 1 wreg ]
+[v derp@cCommand cCommand `uc  1 p 1 7 ]
+[v derp@c c `uc  1 p 1 8 ]
+[v derp@flip flip `uc  1 p 1 9 ]
+[v derp@nDelay nDelay `i  1 p 2 10 ]
+[v derp@cAddress cAddress `uc  1 a 1 14 ]
+"226
+} 0
+"97
+[v _send send `(v  1 e 0 0 ]
+{
+[v send@cAddress cAddress `uc  1 a 1 wreg ]
+"199
+[v send@i_62 i `uc  1 a 1 9 ]
+"188
+[v send@i_61 i `uc  1 a 1 8 ]
+"163
+[v send@i_59 i `i  1 a 2 6 ]
+"152
+[v send@i_58 i `i  1 a 2 4 ]
+"141
+[v send@i_57 i `i  1 a 2 2 ]
+"130
+[v send@i i `i  1 a 2 0 ]
+"97
+[v send@cAddress cAddress `uc  1 a 1 wreg ]
+[v send@cCommand cCommand `uc  1 p 1 2 ]
+[v send@c c `uc  1 p 1 3 ]
+[v send@flip flip `uc  1 p 1 4 ]
+[v send@cAddress cAddress `uc  1 a 1 10 ]
+"211
+} 0
+"21
+[v _pingSony pingSony `(v  1 e 0 0 ]
+{
+[v pingSony@cPulses cPulses `uc  1 a 1 wreg ]
+[v pingSony@cPulses cPulses `uc  1 a 1 wreg ]
+[v pingSony@cPulses cPulses `uc  1 a 1 1 ]
+"40
+} 0
+"69
+[v _pingRC5 pingRC5 `(v  1 e 0 0 ]
+{
+[v pingRC5@cPulses cPulses `uc  1 a 1 wreg ]
+[v pingRC5@cPulses cPulses `uc  1 a 1 wreg ]
+[v pingRC5@cPulses cPulses `uc  1 a 1 1 ]
+"93
+} 0
+"44
+[v _pingNEC pingNEC `(v  1 e 0 0 ]
+{
+[v pingNEC@cPulses cPulses `uc  1 a 1 wreg ]
+[v pingNEC@cPulses cPulses `uc  1 a 1 wreg ]
+[v pingNEC@cPulses cPulses `uc  1 a 1 1 ]
+"65
+} 0
