@@ -92,7 +92,7 @@ void pingRC5(unsigned char cPulses) {
     }
 }
 /*==============================================================================
- Send Function (Called by Derp function)
+ Send Function (Called by sendfivetimes function)
 ==============================================================================*/
 void send(unsigned char cAddress, unsigned char cCommand, unsigned char c, unsigned char flip) {
     if (c == 1) {
@@ -210,9 +210,9 @@ void send(unsigned char cAddress, unsigned char cCommand, unsigned char c, unsig
     }
 }
 /*==============================================================================
- Derp Function (Called by Main)
+ sendfivetimes Function (Called by Main)
 ==============================================================================*/
-void derp(unsigned char cAddress, unsigned char cCommand, unsigned char c, unsigned char flip, int nDelay) {
+void sendfivetimes(unsigned char cAddress, unsigned char cCommand, unsigned char c, unsigned char flip, int nDelay) {
     for (int i = 0; i < 5; i++) {               //Function to send each code 5 times.
         send(cAddress, cCommand, c, flip);
         if (nDelay == 25) {
@@ -315,7 +315,7 @@ int main(void) {
 
     // Initialize I/O and peripherals for PORTB output
     initPorts();
-
+    //Bit codes to be sent to TV
     unsigned char SonyDown = 0b00010011; //7 bit command length   0b01100100
     unsigned char SonyTV = 0b00000001; //5 bit address`   0b00010000
     unsigned char SonyPower = 0b00010101; //0b01010100
@@ -361,18 +361,17 @@ int main(void) {
 
         if (S1 == 0) {
             while (S1 == 0) {
-                derp(SonyTV, SonyDown, 1, 0, 25); //SONY
+                sendfivetimes(SonyTV, SonyDown, 1, 0, 25); //SONY
                 __delay_ms(10);
-                derp(RC5TV, RC5Down, 3, cflip, 114);        //RC5
+                sendfivetimes(RC5TV, RC5Down, 3, cflip, 114);        //RC5
                 __delay_ms(10);
-                derp(RelisysTV, RelisysDown, 2, 0, 140);        //NEC
+                sendfivetimes(RelisysTV, RelisysDown, 2, 0, 140);        //NEC
                 __delay_ms(10);
                 panasonic(PanasonicTV, PanasonicTV2, PanasonicTV3, PanasonicTV4, PanasonicDown, PanasonicDown2, PanasonicFinal);
-                //derp(PanasonicTV, PanasonicDown, 2, 0, 140);        //NEC
                 __delay_ms(10);
-                derp(SharpTV, SharpDown, 2, 0, 140);        //NEC
+                sendfivetimes(SharpTV, SharpDown, 2, 0, 140);        //NEC
                 __delay_ms(10);
-                derp(ToshibaTV, ToshibaDown, 2, 0, 140);        //NEC
+                sendfivetimes(ToshibaTV, ToshibaDown, 2, 0, 140);        //NEC
                 __delay_ms(10);
             }
             if (cflip == 0) { //when released, flip toggle bit
@@ -383,18 +382,17 @@ int main(void) {
         }
         if (S2 == 0) { //APPARENTLY S2 IS ALWAYS PRESSED
             while (S2 == 0) {
-                derp(SonyTV, SonyPower, 1, 0, 25);      //SONY
+                sendfivetimes(SonyTV, SonyPower, 1, 0, 25);      //SONY
                 __delay_ms(10);
-                derp(RC5TV, RC5Power, 3, cflip, 114);       //RC5
+                sendfivetimes(RC5TV, RC5Power, 3, cflip, 114);       //RC5
                 __delay_ms(10);
-                derp(RelisysTV, RelisysPower, 2, 0, 140);       //NEC
+                sendfivetimes(RelisysTV, RelisysPower, 2, 0, 140);       //NEC
                 __delay_ms(10);
                 panasonic(PanasonicTV, PanasonicTV2, PanasonicTV3, PanasonicTV4, PanasonicPower, PanasonicPower2, PanasonicFinal);
-                //derp(PanasonicTV, PanasonicPower, 2, 0, 140);       //NEC
                 __delay_ms(10);
-                derp(SharpTV, SharpPower, 2, 0, 140);       //NEC
+                sendfivetimes(SharpTV, SharpPower, 2, 0, 140);       //NEC
                 __delay_ms(10);
-                derp(ToshibaTV, ToshibaPower, 2, 0, 140);       //NEC
+                sendfivetimes(ToshibaTV, ToshibaPower, 2, 0, 140);       //NEC
                 __delay_ms(10);
             }
             if (cflip == 0) { //when released, flip toggle bit
@@ -405,18 +403,17 @@ int main(void) {
         }
         if (S3 == 0) {
             while (S3 == 0) {
-                derp(SonyTV, SonyUp, 1, 0, 25);     //SONY
+                sendfivetimes(SonyTV, SonyUp, 1, 0, 25);     //SONY
                 __delay_ms(10);
-                derp(RC5TV, RC5Up, 3, cflip, 114);      //RC5
+                sendfivetimes(RC5TV, RC5Up, 3, cflip, 114);      //RC5
                 __delay_ms(10);
-                derp(RelisysTV, RelisysUp, 2, 0, 140);       //NEC
+                sendfivetimes(RelisysTV, RelisysUp, 2, 0, 140);       //NEC
                 __delay_ms(10);
                 panasonic(PanasonicTV, PanasonicTV2, PanasonicTV3, PanasonicTV4, PanasonicDown, PanasonicDown2, PanasonicFinal);
-                //derp(PanasonicTV, PanasonicPower, 2, 0, 140);       //NEC
                 __delay_ms(10);
-                derp(SharpTV, SharpUp, 2, 0, 140);       //NEC
+                sendfivetimes(SharpTV, SharpUp, 2, 0, 140);       //NEC
                 __delay_ms(10);
-                derp(ToshibaTV, ToshibaUp, 2, 0, 140);       //NEC
+                sendfivetimes(ToshibaTV, ToshibaUp, 2, 0, 140);       //NEC
                 __delay_ms(10);
             }
             if (cflip == 0) { //when released, flip toggle bit
